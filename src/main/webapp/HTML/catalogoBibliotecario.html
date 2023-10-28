@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="../CSS/estiloCatalogo.css">
+    <link rel="stylesheet" href="../CSS/prueba.css">
+</head>
+<body>
+
+<header>
+    <div class="encabezado">
+        <img src="../img/Logo3.png">
+        <div class="title">
+            <h1>Paginas Doradas</h1>
+        </div>
+    </div>
+
+</header>
+
+<nav>
+    <a href="">Inicio</a>
+    <a href="../HTML/catalogoBibliotecario.html">Catalogo</a>
+    <a href="">Registros</a>
+    <a href="">Informes</a>
+    <a href="">Avisar</a>
+    <a href="">Inicio de sesión</a>
+</nav>
+
+<main>
+    <form action="" method="post" id="Caja">
+        <div id="BotonTex">
+            <input type="text"
+                   name="Titulo"
+                   size="30"
+                   maxlength="30"
+                   autofocus
+                   title="Ingrese un libro a buscar"
+            >
+        </div>
+
+        <div id="Busqueda">
+            <button>Generar Reporte</button>
+        </div>
+
+        <div id="BotonDes">
+            <select name="Libros" size="1">
+                <optgroup label="Titulo">
+                    <option selected value="Libro"> Libros
+                    <option value="Libro"> Libros
+                    <option selected value="Libro"> Libros
+                </optgroup>
+                <optgroup label="Autor">
+                    <option selected value="Libro"> Libros
+                    <option value="Libro"> Libros
+                    <option selected value="Libro"> Libros
+                </optgroup>
+                <optgroup label="Genero">
+                    <option selected value="Romance"> Libros
+                    <option value="Ficcion"> Libros
+                    <option selected value="Terror"> Libros
+                </optgroup>
+            </select>
+        </div>
+
+        <fieldset>
+            <div id="Reporte">
+                Aqui se mostrara el reporte
+            </div>
+        </fieldset>
+    </form>
+</main>
+
+<footer>
+    <div class="Pie">
+        Aqui va el pie de pagina
+    </div>
+</footer>
+
+</body>
+</html>

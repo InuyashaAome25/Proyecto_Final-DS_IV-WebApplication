@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="../CSS/prueba.css">
+    <link rel="stylesheet" href="../CSS/estiloDevolucion.css">
+</head>
+<body>
+
+<header>
+    <div class="encabezado">
+        <img src="../img/Logo3.png">
+        <div class="title">
+            <h1>Paginas Doradas</h1>
+        </div>
+    </div>
+</header>
+
+<nav>
+    <a href="">Inicio</a>
+    <a href="">Catalogo</a>
+    <a href="">Registros</a>
+    <a href="">Informes</a>
+    <a href="">Avisar</a>
+    <a href="">Inicio de sesión</a>
+</nav>
+
+<main>
+    <div id="formulario">
+        <form action="" method="post" accept-charset="UTF-8">
+            <fieldset>
+                <legend><h3>Devoluciones</h3></legend>
+                <div class="casilla">
+                    ID de préstamo: <input type="number"
+                                           name="id"
+                                           size="20"
+                                           maxlength="20"
+                                           autofocus required placeholder="id"
+                                           title="Ingrese el ID del prestamo">
+                </div>
+                <div class="casilla">
+                    Titulo: <input type="text"
+                                   name="Title"
+                                   size="20"
+                                   maxlength="20"
+                                   title="Ingrese Titulo del libro">
+                </div>
+                <div class="casilla">
+                    Nombres Prestatario: <input type="text"
+                                                name="Nombre"
+                                                size="20"
+                                                maxlength="20"
+                                                title="Ingrese Nombre del Prestatario">
+                </div>
+                <div class="casilla">
+                    Fecha Préstamo: <input type="date"
+                                           name="fechaPrestamo">
+                </div>
+                <div class="casilla">
+                    Fecha Devolución: <input type="date"
+                                             name="fechaDevolucion">
+                </div>
+                <h3>Estado</h3>
+                <div class="casilla">
+                    <input name="BuenEstado" type="radio" value="bueno">En Buen Estado<label></label>
+                </div>
+                <div class="casilla">
+                    <input name="Dañado" type="radio" value="dañado">Dañado<label></label>
+                </div>
+                <div class="casilla">
+                    <input name="Perdido" type="radio" value="perdido">Perdido<label></label>
+                </div>
+
+            </fieldset>
+            <div id="enviar-button">
+                <input type="submit" value="Enviar" class="boton">
+            </div>
+        </form>
+    </div>
+</main>
+
+<footer>
+    <div>
+        Aqui va el pie de pagina
+    </div>
+</footer>
+
+</body>
+</html>
