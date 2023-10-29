@@ -1,0 +1,18 @@
+.encabezado {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.encabezado img {
+    width: 120px;
+    height: 120px;
+}
+
+.encabezado h1 {
+    flex: 1;
+    text-align: center;
+    padding-right: 240px;
+}
