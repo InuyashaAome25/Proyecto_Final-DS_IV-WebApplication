@@ -1,11 +1,11 @@
-.login {
+.registrar {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: 100%;
 }
-.login input {
+.registrar input {
     text-align: center;
 }
 
@@ -28,9 +28,10 @@ legend {
     align-items: center;
 }
 
-.correo, .password {
+.nombre, .apellido, .correo, .password {
     height: 25px;
     width: 250px;
+    margin: 2px;
 }
 
 .enviar {

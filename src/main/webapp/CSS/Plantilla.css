@@ -14,15 +14,48 @@ HEADER{
     background-color: gold;
 }
 
+.encabezado {
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.encabezado img {
+    width: 120px;
+    height: 120px;
+}
+
+.encabezado h1 {
+    flex: 1;
+    text-align: center;
+    padding-right: 240px;
+}
+
 NAV{
     width: 100%;
     height: 80px;
     background-color: #ab1135;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a {
+    width: auto;
+    height: auto;
+    border-radius: 25px;
+    color: gold;
+    background-color: #ab1135;
+    padding: 10px 20px;
+    text-decoration: none;
 }
 
 MAIN{
     width: 100%;
-    height: 120px;
+    height: 500px;
     background-color: #2983d1;
 }
 
