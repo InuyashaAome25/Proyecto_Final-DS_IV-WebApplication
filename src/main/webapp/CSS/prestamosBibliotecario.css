@@ -1,0 +1,28 @@
+.prestamosBibliotecario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+form {
+    border: 5px gold outset;
+    padding: 40px;
+    background-color: darkgoldenrod;
+}
+
+legend {
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+
+.enviar {
+    width: 100px;
+    float: right;
+}
+
+.info input {
+    float: right;
+}

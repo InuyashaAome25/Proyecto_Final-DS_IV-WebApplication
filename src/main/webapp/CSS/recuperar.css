@@ -1,0 +1,43 @@
+.recuperar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+.recuperar input {
+    text-align: center;
+}
+
+form {
+    border: 5px gold outset;
+    padding: 40px;
+    background-color: darkgoldenrod;
+}
+
+legend {
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+
+.credenciales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre, .apellido, .correo, .password {
+    height: 25px;
+    width: 250px;
+    margin: 2px;
+}
+
+.enviar {
+    width: 100px;
+}
+
+.credenciales a {
+    text-decoration: none;
+}
