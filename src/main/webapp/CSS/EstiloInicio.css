@@ -1,0 +1,122 @@
+
+aside{
+    width: 30%;
+    height: 740px;
+    background-color: #CBD5E1;
+    position: absolute;
+    top: 285px;
+    bottom: 150px;
+    left: 70%;
+}
+
+.tamañoIMG{
+    width: 210px;
+    height: 280px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.5);
+    margin: 20px 20px 20px 40px;
+}
+
+#divIMG{
+    width: 75%;
+    height: 350px;
+    margin: 30px 20px 20px 30px;
+    position: relative;
+    top: 20px;
+    right: 100px;
+    bottom: 50px;
+    left: 150px;
+}
+
+#parrafoCita{
+    font-family: "Times New Roman", serif;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin: 5px 5px 5px 5px;
+}
+
+.tamañoDiv{
+    width: 75%;
+    height: 70px;
+    margin: 40px 20px 20px 50px;
+}
+.cita{
+    width: 60%;
+    height: 40px;
+    margin: 20px 5px 5px 20px;
+    font-family: "Times New Roman", serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.articuloT{
+    width: 60%;
+    height: 40px;
+    margin: 20px 10px 10px 90px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+#textoArt{
+    width: 80%;
+    height: 100px;
+    margin: 15px 15px 20px 30px;
+    font-family: "Times New Roman", serif;
+    text-align: justify;
+    text-indent: 30px;
+}
+
+#divAside{
+    width: 365px;
+    height: 150px;
+    border-width: 5px 5px 5px 5px;
+    border-style: ridge;
+    border-color: #e1d7cb;
+    margin: 20px 15px 20px 20px;
+}
+
+.titulAside{
+    width: 60%;
+    height: 40px;
+    margin: 20px 10px 10px 75px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: capitalize;
+}
+
+.textTila{
+    font-family: "Courier New", monospace;
+    font-size: 15px;
+    text-align: left;
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+
+.menu-horizontal >li >a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#tituloAside{
+    width: 350px;
+    height: auto;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 19px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-style: italic;
+}

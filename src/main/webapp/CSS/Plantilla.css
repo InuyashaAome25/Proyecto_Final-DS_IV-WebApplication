@@ -4,15 +4,10 @@ HTML{
 
 BODY{
     width: 100%;
-    background-color: #2983d1;
+    background-color: #CBD5E1;
     margin: auto;
 }
 
-HEADER{
-    width: 100%;
-    height: 150px;
-    background-color: gold;
-}
 
 .encabezado {
     display: flex;
@@ -31,36 +26,59 @@ HEADER{
     flex: 1;
     text-align: center;
     padding-right: 140px;
+    height: auto;
+    background-color: #8EC1D6;
 }
 
 NAV{
     width: 100%;
     height: 80px;
-    background-color: #ab1135;
     text-align: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-nav a {
-    width: auto;
-    height: auto;
-    border-radius: 25px;
-    color: gold;
-    background-color: #ab1135;
-    padding: 10px 20px;
-    text-decoration: none;
-}
 
 MAIN{
     width: 100%;
-    height: 500px;
+    height: 120px;
     background-color: #2983d1;
 }
 
 FOOTER{
     width: 100%;
-    height: 150px;
-    background-color: #156bdb;
+    height: 100px;
+    background-color: #8EC1D6;
+}
+
+
+.logo{
+    width: 180px;
+    height: 140px;
+    margin: 30px 25px 25px 30px;
+    padding: 10px 10px 10px 10px;
+
+}
+
+.tituloPrincipal{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 18px;
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 500px;
+    bottom: 20px;
+}
+
+.piePag{
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 20px;
 }
