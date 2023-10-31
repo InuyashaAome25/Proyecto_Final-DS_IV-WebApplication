@@ -8,47 +8,28 @@ BODY{
     margin: auto;
 }
 
-
-.encabezado {
-    display: flex;
-    padding: 20px;
+head{
     width: 100%;
-    align-items: center;
-    justify-content: center;
-}
-
-.encabezado img {
-    width: 120px;
-    height: 120px;
-}
-
-.encabezado h1 {
-    flex: 1;
-    text-align: center;
-    padding-right: 140px;
     height: auto;
     background-color: #8EC1D6;
 }
 
 NAV{
     width: 100%;
-    height: 80px;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    height: 60px;
+    background-color: #44515b;
 }
 
 
 MAIN{
-    width: 100%;
-    height: 120px;
-    background-color: #2983d1;
+    width: 70%;
+    height: auto;
+    background-color: #CBD5E1;
 }
 
 FOOTER{
     width: 100%;
-    height: 100px;
+    height: 120px;
     background-color: #8EC1D6;
 }
 
@@ -81,4 +62,17 @@ FOOTER{
     text-transform: uppercase;
     position: relative;
     top: 20px;
+}
+
+.menu-horizontal >li >a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    text-transform: capitalize;
 }

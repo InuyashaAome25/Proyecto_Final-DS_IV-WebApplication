@@ -5,21 +5,30 @@
     <title>Registrar Prestamos</title>
     <link rel="stylesheet" href="../CSS/Plantilla.css">
     <link rel="stylesheet" href="../CSS/prestamosBibliotecario.css">
+    <link rel="stylesheet" href="../CSS/blibliotecario.css">
+
 </head>
 <body>
 <header>
-    <div class="encabezado">
-        <img src="../IMAGENES/logo.jpg" alt="Logo">
-        <h1>Paginas Doradas</h1>
+    <div >
+        <img src="../IMG/Logo.png" alt="Logo" class="logo">
+        <h1 class="tituloPrincipal">Paginas Doradas</h1>
     </div>
 </header>
 <nav>
-    <a href="">Inicio</a>
-    <a href="">Catalogo</a>
-    <a href="">Registros</a>
-    <a href="">Informes</a>
-    <a href="">Avisar</a>
-    <a href="">Inicio de sesión</a>
+    <ul class="menu-horizontal">
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="catalogoBibliotecario.html">Catalogo</a></li>
+        <li><a href="Crear_Libro.html">Registro</a>
+            <ul class="menu-vertical">
+                <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                <li><a href="devoluciones.html">Devoluciones</a></li>
+                <li><a>Informen</a></li>
+            </ul>
+        </li>
+        <li><a href="Avisar.html">Avisar</a></li>
+        <li><a href="login.html">Inicio de sesión</a></li>
+    </ul>
 </nav>
 <main>
     <div class="prestamosBibliotecario">

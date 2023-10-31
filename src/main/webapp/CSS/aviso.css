@@ -1,0 +1,27 @@
+
+form {
+    width: 45%; /* Ancho deseado para la caja */
+    margin: 0 auto;
+    text-align: center;
+}
+
+h4, input {
+    display: inline-block; /* Coloca los elementos en línea uno al lado del otro */
+    margin: 5px; /* Agrega espacio entre los elementos */
+}
+
+input[type="submit"] {
+    background-color: #3498db; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+input[type="submit"]:hover {
+    background-color: green; /* Cambia el color de fondo al pasar el cursor */
+}
+
+
+

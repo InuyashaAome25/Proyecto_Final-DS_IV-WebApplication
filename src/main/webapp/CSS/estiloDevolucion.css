@@ -1,0 +1,30 @@
+.casilla{
+    margin-bottom: 10px;
+}
+
+#enviar-button{
+    bottom: 100%;
+    right: 100%;
+}
+
+#formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.boton{
+    bottom: 100%;
+    right: 100%;
+}
+
+form{
+    width: 100%;
+}
+
+fieldset{
+    border: 2px solid gold;
+}
+
+main{
+    height: 500px;
+}

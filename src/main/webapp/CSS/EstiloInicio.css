@@ -4,7 +4,7 @@ aside{
     height: 740px;
     background-color: #CBD5E1;
     position: absolute;
-    top: 285px;
+    top: 315px;
     bottom: 150px;
     left: 70%;
 }
@@ -96,18 +96,6 @@ aside{
     text-align: left;
     text-transform: capitalize;
     margin-left: 15px;
-}
-
-.menu-horizontal >li >a{
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-}
-.menu-horizontal{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
 }
 
 #tituloAside{
