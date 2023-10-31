@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Paginas Doradas S.A</title>
-    <link rel="stylesheet" href="../CSS/Plantilla.css">
     <link rel="stylesheet" href="../CSS/EstiloCrear.css">
+    <LINK REL="stylesheet" HREF="../CSS/Plantilla.css">
 </head>
 <body>
     <header>
-        <img src="../IMG/Logo.jpg" class="logot">
-        <h1 class="tituloPrincipal">registro</h1>
+        <img src="../IMG/Logo.png" class="logo">
+        <h1 id="tilCrear">registros</h1>
     </header>
     <nav>
         <ul class="menu-horizontal">
@@ -19,7 +19,7 @@
                 <ul class="menu-vertical">
                     <li><a>Prestamos</a></li>
                     <li><a>Devoluciones</a></li>
-                    <li><a>Informenes</a></li>
+                    <li><a>Informen</a></li>
                 </ul>
             </li>
             <li><a>Avisar</a></li>
@@ -28,7 +28,64 @@
     </nav>
     <main>
         <form action="../JSP/Libro" method="post">
-            <br><br><br>
+            <fieldset>
+                <legend>Grabar Libro</legend>
+                Nombre:<input type="text"
+                              name="nomIMG"
+                              maxlength="20"
+                              autofocus
+                              required
+                              placeholder="Nombre de la imagen">
+
+                Foto:<input type="file"
+                            name="imagenBD"
+                            required>
+                <br>
+                Titulo:<input type="text"
+                              name="tituloLibro"
+                              maxlength="40"
+                              required
+                              placeholder="Nombre del titulo">
+                <br>
+                Autor:<input type="text"
+                             name="nombreAutor"
+                             maxlength="15"
+                             required
+                             placeholder="Ingrese el nombre del autor">
+                <br>
+                <input type="text"
+                       name="apellidoAutor"
+                       maxlength="15"
+                       required
+                       placeholder="Ingrese el apellido del autor">
+                <br>
+                ISBN: <input type="text"
+                             name="isbn"
+                             maxlength="15"
+                             required
+                             placeholder="Ingrese el ISBN">
+                <br>
+                Fecha de Publicación: <input type="text"
+                                             name="fechaPlub"
+                                             required
+                                             placeholder="Ingrese la fecha en formato (DD/MM/AA)"
+                                             size="35">
+                <br>
+                Descripción: <input type="text"
+                                    name="descripLibro"
+                                    required
+                                    placeholder="De una descripción del libro"
+                                    size="35"
+                                    maxlength="50">
+                <h2>Estado</h2>
+                <input type="radio" name="libro" value="disponible" checked> Disponible
+                <input type="radio" name="libro" value="prestado"> Prestado
+                <input type="radio" name="libro" value="preparación"> Prestado
+            </fieldset>
+            <div>
+                <input type="reset" name="restablecer" value="Restablecer">
+                <input type="submit" name="guardar" value="Enviar">
+            </div>
         </form>
     </main>
     <footer>

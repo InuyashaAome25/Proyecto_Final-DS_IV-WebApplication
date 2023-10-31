@@ -1,44 +1,10 @@
-HTML{
-    background-color: aliceblue;
-}
-
-BODY{
-    width: 100%;
-    background-color: #2983d1;
-    margin: auto;
-}
-
-HEADER{
-    width: 100%;
-    height: auto;
-    background-color: gold;
-}
-
-NAV{
-    width: 100%;
-    height: 50px;
-    background-color: #ab1135;
-
-}
-
-MAIN{
-    width: 70%;
-    height: auto;
-    background-color: #2983d1;
-}
-
-FOOTER{
-    width: 100%;
-    height: 100px;
-    background-color: #156bdb;
-}
 
 aside{
     width: 30%;
     height: 740px;
-    background-color: #d16729;
+    background-color: #CBD5E1;
     position: absolute;
-    top: 269px;
+    top: 285px;
     bottom: 150px;
     left: 70%;
 }
@@ -59,29 +25,6 @@ aside{
     right: 100px;
     bottom: 50px;
     left: 150px;
-}
-
-.logot{
-    width: 180px;
-    height: 140px;
-    margin: 30px 25px 25px 30px;
-    padding: 10px 10px 10px 10px;
-    background: #e291f2;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.tituloPrincipal{
-    text-align: center;
-    text-decoration: underline;
-    text-transform: uppercase;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    font-size: 20px;
-    float: right;
-    position: relative;
-    top: 50px;
-    right: 485px;
-    bottom: 20px;
 }
 
 #parrafoCita{
@@ -128,30 +71,13 @@ aside{
 }
 
 #divAside{
-    width: 360px;
+    width: 365px;
     height: 150px;
     border-width: 5px 5px 5px 5px;
     border-style: ridge;
-    border-color: #e291f2;
-    margin: 20px 20px 20px 20px;
+    border-color: #e1d7cb;
+    margin: 20px 15px 20px 20px;
 }
-
-
-a:link {
-    color: blue;
-}
-a:visited{
-    color: #660099;
-}
-a:hover{
-    color: springgreen;
-    font-style: italic;
-}
-&
-a:active{
-    color: deepskyblue;
-}
-
 
 .titulAside{
     width: 60%;
@@ -166,10 +92,31 @@ a:active{
 
 .textTila{
     font-family: "Courier New", monospace;
-    font-weight: bold;
     font-size: 15px;
     text-align: left;
     text-transform: capitalize;
     margin-left: 15px;
 }
 
+.menu-horizontal >li >a{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+.menu-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#tituloAside{
+    width: 350px;
+    height: auto;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 19px;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-style: italic;
+}
