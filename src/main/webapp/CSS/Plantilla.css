@@ -1,58 +1,85 @@
-HTML{
+
+html{
     background-color: aliceblue;
 }
-
-BODY{
+body{
     width: 100%;
-    background-color: #CBD5E1;
     margin: auto;
+    background-color: #CBD5E1;
 }
-
-head{
+header{
     width: 100%;
-    height: auto;
-    background-color: #8EC1D6;
+    height: 150px;
+    background-color: #F29D64;
 }
-
-NAV{
+nav{
     width: 100%;
     height: 60px;
-    background-color: #44515b;
+    background-color: #0A3342;
 }
-
-
-MAIN{
-    width: 70%;
+main{
+    width: 100%;
     height: auto;
     background-color: #CBD5E1;
 }
-
-FOOTER{
+footer{
     width: 100%;
-    height: 120px;
-    background-color: #8EC1D6;
+    height: 100px;
+    background-color: #F29D64;
 }
 
-
 .logo{
-    width: 180px;
-    height: 140px;
-    margin: 30px 25px 25px 30px;
-    padding: 10px 10px 10px 10px;
-
+    width: 110px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+    position: relative;
+    left: 70px;
+    bottom: 5px;
 }
 
 .tituloPrincipal{
+    width: 340px;
+    height: 40px;
+    float: right;
+    position: relative;
+    top: 25px;
+    right: 480px;
+    bottom: 25px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: "Courier New", monospace;
     font-weight: bold;
-    font-size: 18px;
-    float: right;
-    position: absolute;
-    top: 50px;
-    right: 500px;
-    bottom: 20px;
+    font-size: 35px;
+    padding: 10px;
+    color: white;
+}
+.menu{
+    list-style: none;
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: auto;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 90px 21px 90px;
+    display: block;
+    transition: all 300ms ease;
+}
+.menu li{
+    display: inline-block;
+    justify-content: space-around;
+    text-transform: capitalize;
+    position: relative;
+}
+.menu li a:hover{
+    transform: scale(1.1);
+    background: #164E63;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    font-style: italic;
 }
 
 .piePag{
@@ -61,18 +88,5 @@ FOOTER{
     text-align: center;
     text-transform: uppercase;
     position: relative;
-    top: 20px;
-}
-
-.menu-horizontal >li >a{
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
-}
-.menu-horizontal{
-    list-style: none;
-    display: flex;
-    justify-content: space-around;
-    text-transform: capitalize;
+    top: 30px;
 }

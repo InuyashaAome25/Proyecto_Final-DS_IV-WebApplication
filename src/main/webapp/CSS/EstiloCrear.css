@@ -1,13 +1,58 @@
 
-#tilCrear{
+.estilo_formulario{
+    width: 800px;
+    background-color: #3E4B58;
+    border: none;
+    padding: 35px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    font-family: "Times New Roman", serif;
+}
+#estilo_legend{
+    padding: 20px;
+    background-color: #1D2C3B;
+    color: white;
+    font-family: "Times New Roman", serif;
     text-align: center;
-    text-transform: uppercase;
-    font-family: "Courier New", monospace;
-    font-weight: bold;
-    font-size: 38px;
-    float: right;
-    position: absolute;
-    top: 60px;
-    right: 580px;
-    bottom: 20px;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 3px;
+}
+.estilo_label{
+    display: block;
+    padding: 15px;
+    margin: 15px;
+    font-family: "Times New Roman",serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.estilo_label_autor{
+    padding: 15px;
+    margin: 15px;
+    font-family: "Times New Roman",serif;
+    font-size: 20px;
+    color: white;
+}
+
+#tituloEstado{
+
+}
+
+.estilo_radius{
+    display: block;
+}
+.estilo_input{
+    width: 95%;
+    background: #CBD5E1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border: 2px solid #58483e;
+    font-family: "Times New Roman",serif;
+    font-size: 16px;
+    text-transform: capitalize;
 }

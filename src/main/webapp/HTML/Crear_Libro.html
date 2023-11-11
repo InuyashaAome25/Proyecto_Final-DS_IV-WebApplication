@@ -5,102 +5,90 @@
     <title>Paginas Doradas S.A</title>
     <LINK REL="stylesheet" HREF="../CSS/Plantilla.css">
     <link rel="stylesheet" href="../CSS/EstiloCrear.css">
-    <link rel="stylesheet" href="../CSS/EstiloInicio.css">
-    <link rel="stylesheet" href="../CSS/blibliotecario.css">
+    <link rel="stylesheet" href="../CSS/PlantillaBiblio.css">
 </head>
 <body>
     <header>
-        <img src="../IMG/Logo.png" class="logo">
-        <h1 id="tilCrear">registros</h1>
+        <img src="../IMG/Logo.png" alt="logo compañía" class="logo">
+        <h1 class="tituloPrincipal">registros</h1>
     </header>
     <nav>
-        <ul class="menu-horizontal">
-            <li><a href="Inicio.html">Inicio</a></li>
-            <li><a href="catalogoBibliotecario.html">Catalogo</a></li>
-            <li><a href="Crear_Libro.html">Registro</a>
-                <ul class="menu-vertical">
-                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
-                    <li><a href="devoluciones.html">Devoluciones</a></li>
-                    <li><a>Informen</a></li>
-                </ul>
-            </li>
-            <li><a href="Avisar.html">Avisar</a></li>
-            <li><a href="login.html">Inicio de sesión</a></li>
-        </ul>
+
     </nav>
     <main>
         <form action="../JSP/Libro" method="post">
-            <fieldset>
-                <legend>Grabar Libro</legend>
-                Nombre:<input type="text"
+            <fieldset class="estilo_formulario">
+                <legend id="estilo_legend">Grabar Libro</legend>
+                <label class="estilo_label">Nombre</label>
+                <input type="text"
                               name="nomIMG"
                               maxlength="20"
                               autofocus
                               required
-                              placeholder="Nombre de la imagen">
-
-                Foto:<input type="file"
+                              placeholder="Nombre de la imagen" class="estilo_input">
+                <label class="estilo_label">Foto</label>
+                <input type="file"
                             name="imagenBD"
-                            required>
-                <br>
-                Titulo:<input type="text"
+                            required class="estilo_input">
+
+                <label class="estilo_label">Titulo</label>
+                <input type="text"
                               name="tituloLibro"
                               maxlength="40"
                               required
-                              placeholder="Nombre del titulo">
-                <br>
-                Autor:<input type="text"
-                             name="nombreAutor"
-                             maxlength="15"
-                             required
-                             placeholder="Ingrese el nombre del autor">
-                <br>
-                <input type="text"
-                       name="apellidoAutor"
-                       maxlength="15"
-                       required
-                       placeholder="Ingrese el apellido del autor">
-                <br>
-                ISBN: <input type="text"
+                              placeholder="Nombre del titulo" class="estilo_input">
+
+                <label class="estilo_label">Autor(es)</label>
+                <div id="autores">
+                    <label class="estilo_label_autor">Nombre</label>
+                    <input type="text" name="autor_nombre" required placeholder="Ingrese el nombre" maxlength="15" class="estilo_input">
+                    <label class="estilo_label_autor">Apellido</label>
+                    <input type="text" name="autor_apellido" required placeholder="Ingrese el apellido" maxlength="15" class="estilo_input">
+                </div>
+
+                <label class="estilo_label">ISBN</label> <input type="text"
                              name="isbn"
                              maxlength="15"
                              required
-                             placeholder="Ingrese el ISBN">
-                <br>
-                Fecha de Publicación: <input type="text"
-                                             name="fechaPlub"
-                                             required
-                                             placeholder="Ingrese la fecha en formato (DD/MM/AA)"
-                                             size="35">
-                <br>
-                Descripción: <input type="text"
-                                    name="descripLibro"
-                                    required
-                                    placeholder="De una descripción del libro"
-                                    size="35"
-                                    maxlength="50">
-                <h2>Estado</h2>
-                <input type="radio" name="libro" value="disponible" checked> Disponible
-                <input type="radio" name="libro" value="prestado"> Prestado
-                <input type="radio" name="libro" value="preparación"> Prestado
+                             placeholder="Ingrese el ISBN" class="estilo_input">
+
+                <label class="estilo_label">Fecha de Publicación</label>
+                <input type="text"
+                       name="fechaPlub"
+                       required
+                       placeholder="Ingrese la fecha en formato (DD/MM/AA)"
+                       size="35" class="estilo_input">
+
+                <label class="estilo_label">Descripción</label>
+                <input type="text"
+                       name="descripLibro"
+                       required
+                       placeholder="De una descripción del libro"
+                       size="35"
+                       maxlength="50" class="estilo_input">
+                <h2 id="tituloEstado">Estado</h2>
+                <input type="radio" name="libro" value="disponible" checked class="estilo_radius"> Disponible
+                <input type="radio" name="libro" value="prestado" class="estilo_radius"> Prestado
+                <input type="radio" name="libro" value="preparación" class="estilo_radius"> En Preparación
+                <div>
+                    <input type="reset" name="restablecer" value="Restablecer">
+                    <input type="submit" name="guardar" value="Enviar">
+                </div>
             </fieldset>
-            <div>
-                <input type="reset" name="restablecer" value="Restablecer">
-                <input type="submit" name="guardar" value="Enviar">
-            </div>
+
         </form>
     </main>
     <footer>
         <div>
             <p class="piePag">
-                Uzziel Aparicio
-                Cesar Castillo
-                Michael Perez
-                Victor Rodriguez
+                Uzziel Aparicio -
+                Cesar Castillo -
+                Michael Perez -
+                Victor Rodriguez -
                 Richard Zhang
             </p>
             <p class="piePag">
-                © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv
+                © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv - grupo 1
             </p>
         </div>
     </footer>

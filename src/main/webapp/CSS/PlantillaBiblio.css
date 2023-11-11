@@ -9,13 +9,9 @@ aside{
     left: 70%;
 }
 
-.tamañoIMG{
-    width: 210px;
-    height: 280px;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.5);
-    margin: 20px 20px 20px 40px;
-}
+.referencia{
 
+}
 #divIMG{
     width: 75%;
     height: 350px;
@@ -26,7 +22,12 @@ aside{
     bottom: 50px;
     left: 150px;
 }
-
+.tamañoIMG{
+    width: 210px;
+    height: 280px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.5);
+    margin: 20px 20px 20px 40px;
+}
 #parrafoCita{
     width: 85%;
     font-family: "Times New Roman", serif;
@@ -70,7 +71,6 @@ aside{
     text-align: justify;
     text-indent: 30px;
 }
-
 .divAside{
     width: 365px;
     height: 180px;
@@ -127,24 +127,4 @@ a:hover{
     color: darkgoldenrod;
     font-style: italic;
 }
-#aInicio{
-    font-size: 11px;
-    transform: scale(1.2);
-    background-color: #164E63;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-    text-decoration: none;
-}
-ul>li:first-child >a{
-    background-image: url("../IMG/home.png");
-    background-repeat: no-repeat;
-    background-size: 60px;
-    background-position: center center;
-    position: relative;
-}
-ul>li:first-child:hover>a{
-    background-image: url("../IMG/home.png");
-    background-repeat: no-repeat;
-    background-size: 60px;
-    background-position: center center;
-    position: relative;
-}
+
