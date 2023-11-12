@@ -3,106 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Biblioteca</title>
-    <link rel="stylesheet" href="../CSS/Plantilla.css">
+    <link rel="stylesheet" href="../CSS/PlantillaBibliotecario.css">
     <link rel="stylesheet" href="../CSS/estiloDevolucion.css">
-    <link rel="stylesheet" href="../CSS/PlantillaBiblio.css">
-
 </head>
 <body>
-
-<header>
-    <div >
-        <img src="../IMG/Logo.png" class="logo">
-        <div>
-            <h1 CLASS="tituloPrincipal">Paginas Doradas</h1>
-        </div>
-    </div>
-</header>
-
-<nav>
-    <ul class="menu-horizontal">
-        <li><a href="Inicio.html">Inicio</a></li>
-        <li><a href="catalogoBibliotecario.html">Catalogo</a></li>
-        <li><a href="Crear_Libro.html">Registro</a>
-            <ul class="menu-vertical">
-                <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
-                <li><a href="devoluciones.html">Devoluciones</a></li>
-                <li><a>Informen</a></li>
-            </ul>
-        </li>
-        <li><a href="Avisar.html">Avisar</a></li>
-        <li><a href="Login.html">Inicio de sesión</a></li>
-    </ul>
-</nav>
-
-<main>
-    <div id="formulario">
-        <form action="" method="post" accept-charset="UTF-8">
-            <fieldset>
-                <legend><h3>Devoluciones</h3></legend>
-                <div class="casilla">
-                    ID de préstamo: <input type="number"
-                                           name="id"
-                                           size="20"
-                                           maxlength="20"
-                                           autofocus required placeholder="id"
-                                           title="Ingrese el ID del prestamo">
-                </div>
-                <div class="casilla">
-                    Titulo: <input type="text"
-                                   name="Title"
-                                   size="20"
-                                   maxlength="20"
-                                   title="Ingrese Titulo del libro">
-                </div>
-                <div class="casilla">
-                    Nombres Prestatario: <input type="text"
-                                                name="Nombre"
-                                                size="20"
-                                                maxlength="20"
-                                                title="Ingrese Nombre del Prestatario">
-                </div>
-                <div class="casilla">
-                    Fecha Préstamo: <input type="date"
-                                           name="fechaPrestamo">
-                </div>
-                <div class="casilla">
-                    Fecha Devolución: <input type="date"
-                                             name="fechaDevolucion">
-                </div>
-                <h3>Estado</h3>
-                <div class="casilla">
-                    <input name="BuenEstado" type="radio" value="bueno">En Buen Estado<label></label>
-                </div>
-                <div class="casilla">
-                    <input name="Dañado" type="radio" value="dañado">Dañado<label></label>
-                </div>
-                <div class="casilla">
-                    <input name="Perdido" type="radio" value="perdido">Perdido<label></label>
-                </div>
-
-            </fieldset>
-            <div id="enviar-button">
-                <input type="submit" value="Enviar" class="boton">
+    <header>
+        <div >
+            <img src="../IMG/Logo.png" class="logo">
+            <div>
+                <h1 CLASS="tituloPrincipal">Paginas Doradas</h1>
             </div>
-        </form>
-    </div>
-</main>
+        </div>
+    </header>
 
-<footer>
-    <div>
-        <p class="piePag">
-            Uzziel Aparicio
-            Cesar Castillo
-            Michael Perez
-            Victor Rodriguez
-            Richard Zhang
-        </p>
-        <p class="piePag">
-            © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv
-        </p>
-    </div>
-</footer>
+    <nav>
+        <ul class="menu">
+            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
+            <li> <a href="Crear_Libro.html">registro</a>
+                <ul class="submenu">
+                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                </ul>
+            </li>
+            <li> <a href="#">informenes</a></li>
+            <li> <a href="Avisar.html">avisar</a></li>
+            <li> <a href="Login.html">Inicio de sesión</a> </li>
+        </ul>
+    </nav>
 
+    <main>
+        <div id="formulario">
+            <form action="" method="post" accept-charset="UTF-8">
+                <fieldset>
+                    <legend><h3>Devoluciones</h3></legend>
+                    <div class="casilla">
+                        ID de préstamo: <input type="number"
+                                               name="id"
+                                               size="20"
+                                               maxlength="20"
+                                               autofocus required placeholder="id"
+                                               title="Ingrese el ID del prestamo">
+                    </div>
+                    <div class="casilla">
+                        Titulo: <input type="text"
+                                       name="Title"
+                                       size="20"
+                                       maxlength="20"
+                                       title="Ingrese Titulo del libro">
+                    </div>
+                    <div class="casilla">
+                        Nombres Prestatario: <input type="text"
+                                                    name="Nombre"
+                                                    size="20"
+                                                    maxlength="20"
+                                                    title="Ingrese Nombre del Prestatario">
+                    </div>
+                    <div class="casilla">
+                        Fecha Préstamo: <input type="date"
+                                               name="fechaPrestamo">
+                    </div>
+                    <div class="casilla">
+                        Fecha Devolución: <input type="date"
+                                                 name="fechaDevolucion">
+                    </div>
+                    <h3>Estado</h3>
+                    <div class="casilla">
+                        <input name="BuenEstado" type="radio" value="bueno">En Buen Estado<label></label>
+                    </div>
+                    <div class="casilla">
+                        <input name="Dañado" type="radio" value="dañado">Dañado<label></label>
+                    </div>
+                    <div class="casilla">
+                        <input name="Perdido" type="radio" value="perdido">Perdido<label></label>
+                    </div>
+
+                </fieldset>
+                <div id="enviar-button">
+                    <input type="submit" value="Enviar" class="boton">
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <p class="piePag">
+                Uzziel Aparicio -
+                Cesar Castillo -
+                Michael Perez -
+                Victor Rodriguez -
+                Richard Zhang
+            </p>
+            <p class="piePag">
+                © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv  - grupo 1
+            </p>
+        </div>
+    </footer>
 </body>
 </html>

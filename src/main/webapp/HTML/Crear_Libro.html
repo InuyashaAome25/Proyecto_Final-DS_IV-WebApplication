@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Paginas Doradas S.A</title>
-    <LINK REL="stylesheet" HREF="../CSS/Plantilla.css">
+    <LINK REL="stylesheet" HREF="../CSS/PlantillaBibliotecario.css">
     <link rel="stylesheet" href="../CSS/EstiloCrear.css">
-    <link rel="stylesheet" href="../CSS/PlantillaBiblio.css">
 </head>
 <body>
     <header>
@@ -13,7 +12,19 @@
         <h1 class="tituloPrincipal">registros</h1>
     </header>
     <nav>
-
+        <ul class="menu">
+            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
+            <li> <a href="Crear_Libro.html">registro</a>
+                <ul class="submenu">
+                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                </ul>
+            </li>
+            <li> <a href="#">informenes</a></li>
+            <li> <a href="Avisar.html">avisar</a></li>
+            <li> <a href="Login.html">Inicio de sesión</a> </li>
+        </ul>
     </nav>
     <main>
         <form action="../JSP/Libro" method="post">
@@ -66,13 +77,18 @@
                        placeholder="De una descripción del libro"
                        size="35"
                        maxlength="50" class="estilo_input">
-                <h2 id="tituloEstado">Estado</h2>
-                <input type="radio" name="libro" value="disponible" checked class="estilo_radius"> Disponible
-                <input type="radio" name="libro" value="prestado" class="estilo_radius"> Prestado
-                <input type="radio" name="libro" value="preparación" class="estilo_radius"> En Preparación
-                <div>
-                    <input type="reset" name="restablecer" value="Restablecer">
-                    <input type="submit" name="guardar" value="Enviar">
+                <div id="radio">
+                    <h2 id="tituloEstado">Estado</h2>
+                    <input type="radio" name="libro" value="disponible" checked id="radio_disponible">
+                    <label for="radio_disponible">Disponible</label>
+                    <input type="radio" name="libro" value="prestado" id="radio_prestado">
+                    <label for="radio_prestado">Prestado</label>
+                    <input type="radio" name="libro" value="preparación" id="radio_preparación">
+                    <label for="radio_preparación">En Preparación</label>
+                </div>
+                <div class="botons">
+                    <input type="reset" name="restablecer" value="Restablecer" class="estilo_botones">
+                    <input type="submit" name="guardar" value="Enviar" class="estilo_botones">
                 </div>
             </fieldset>
 
