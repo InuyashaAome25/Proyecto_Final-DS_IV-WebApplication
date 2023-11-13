@@ -4,39 +4,94 @@
     justify-content: center;
     text-align: center;
     height: 100%;
+    padding: 20px;
 }
 .login input {
     text-align: center;
 }
 
 form {
+    width: 350px;
     border: 5px gold outset;
     padding: 40px;
-    background-color: darkgoldenrod;
+    background-color: #AC8E9A;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 7px 13px 37px #000;
 }
 
 legend {
+    padding: 5px;
+    border-bottom: 1px solid silver;
+
     font-weight: bold;
     font-family: "Courier New", monospace;
-    padding-bottom: 40px;
     font-size: 30px;
 }
 
-.credenciales {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.credenciales input{
+    margin: 10px;
+    padding: 5px 40px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 3px solid goldenrod;
+    background-color: #631433;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }
 
-.correo, .password {
-    height: 25px;
-    width: 250px;
+.credenciales .user{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid silver;
+    margin: 35px 0;
 }
 
-.enviar {
-    width: 100px;
+.user #usuario{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 3px outset goldenrod;
+    text-transform: capitalize;
+    color: white;
+}
+.user #password{
+    width: 100%;
+    padding: 10px 5px;
+    height: 40px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    border: 3px outset goldenrod;
+    text-transform: capitalize;
+    color: white;
+}
+.user label{
+    position: relative;
+    top: 50%;
+    left: 5px;
+    bottom: 10px;
+    text-transform: capitalize;
+    font-size: 17px;
 }
 
-.credenciales a {
+.credenciales h5 a{
     text-decoration: none;
+    font-family: "Courier New", monospace;
+    font-size: 14px;
+    color: white;
+}
+.credenciales a:hover{
+    text-decoration: underline;
+    font-style: oblique;
+    background-color: #631433;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 300ms all ease;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 }

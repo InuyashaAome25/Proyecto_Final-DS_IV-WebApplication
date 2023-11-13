@@ -1,0 +1,10 @@
+#BotonTex, #Busqueda, #BotonDes {
+    margin: 10px;
+}
+
+.tablaLibro{
+    float: left;
+}
+.tablaUsuario{
+    float: left;
+}

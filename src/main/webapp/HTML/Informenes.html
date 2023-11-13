@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginas Doradas S.A - Proyecto</title>
+    <link rel="stylesheet" href="../CSS/PlantillaBibliotecario.css">
+    <link rel="stylesheet" href="../CSS/InformenesEstilo.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../IMG/Logo.png" alt="logo compañia" class="logo">
+            <h1 class="tituloPrincipal">paginas doradas</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
+            <li> <a href="Crear_Libro.html">registro</a>
+                <ul class="submenu">
+                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                </ul>
+            </li>
+            <li> <a href="Informenes.html">informenes</a></li>
+            <li> <a href="Avisar.html">avisar</a></li>
+            <li> <a href="Login.html">Inicio de sesión</a> </li>
+        </ul>
+    </nav>
+    <main>
+        <form method="get">
+            <div id="BotonTex">
+                <input type="text"
+                       name="Titulo"
+                       size="30"
+                       maxlength="30"
+                       autofocus
+                       title="Ingrese un libro a buscar">
+            </div>
+            <div id="Busqueda">
+                <button>Generar Reporte</button>
+            </div>
+            <div>
+                <h3>Número</h3>
+                <h3>Cantidad de prestamos</h3>
+            </div>
+            <div class="tablaLibro">
+                <table border="1" cellpadding="5">
+                    <caption>Libros más populares</caption>
+                    <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Genero</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="tablaUsuario">
+                <table border="1" cellpadding="5">
+                    <caption>Usuarios con más prestamos</caption>
+                    <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Cantidad prestamos</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>TEXTO</th>
+                        <th>TEXTO</th>
+                        <th>TEXTO</th>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </form>
+        <br><br><br><br><br><br><br><br><br>
+    </main>
+    <footer>
+        <p class="piePag">
+            Uzziel Aparicio -
+            Cesar Castillo -
+            Michael Perez -
+            Victor Rodriguez -
+            Richard Zhang
+        </p>
+        <p class="piePag">
+            © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv - grupo 1
+        </p>
+    </footer>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Paginas Doradas S.A - Proyecto</title>
     <link rel="stylesheet" href="../CSS/Plantilla.css">
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="../CSS/Recuperar.css">
 </head>
 <body>
     <header>
@@ -22,21 +22,12 @@
         </ul>
     </nav>
     <main>
-        <div class="login">
+        <div class="recuperar">
             <form method="post">
-                <legend>Inicio de Sesión</legend>
+                <legend>Recuperar Contraseña</legend>
                 <div class="credenciales">
-                    <div class="user">
-                        <label>nombre de usuario</label>
-                        <input type="text" name="user" id="usuario" placeholder="ingrese su Usuario">
-                    </div>
-                    <div class="user">
-                        <label>Contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="ingrese su Password">
-                    </div>
-                    <h5><a href="Recuperar.html">Olvidaste tu contraseña?</a></h5>
-                    <input type="submit" name="enviar" value="Iniciar Sesion">
-                    <h5>¿No tienes una cuenta? <a href="Registrar.html">Regístrate</a></h5>
+                    <input type="text" name="correo" maxlength="20" required placeholder="Correo Electronico" id="correo">
+                    <input type="submit" name="recuperar" value="Recuperar" id="recuperar">
                 </div>
             </form>
         </div>
