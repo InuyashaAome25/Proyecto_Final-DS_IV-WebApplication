@@ -33,10 +33,22 @@
             <form>
                 <legend>Registrar Prestamos</legend>
                 <div class="info">
-                    <h4>ID del Libro: <input type="number" class="idLibro" id="idLibro"></h4>
-                    <h4>Nombre del Prestario: <input type="text" class="nombrePrestario" id="nombrePrestario"></h4>
-                    <h4>Fecha de Prestamo: <input type="date" class="fechaPrestamo" id="fechaPrestamo"></h4>
-                    <h4>Decha de Devolucion: <input type="date" class="fechaDevolucion" id="fechaDevolucion"></h4>
+                    <div class="acomodo">
+                        <label for="idLibro">ISBN del Libro:</label>
+                        <input type="number" required id="idLibro">
+                    </div>
+                    <div class="acomodo">
+                        <label for="nombrePrestario">Nombre del Prestario:</label>
+                        <input type="text" required id="nombrePrestario">
+                    </div>
+                    <div class="acomodo">
+                        <label for="fechaPrestamo">Fecha de Prestamo:</label>
+                        <input type="date" required id="fechaPrestamo">
+                    </div>
+                    <div class="acomodo">
+                        <label for="fechaDevolucion">Fecha de Devolucion:</label>
+                        <input type="date" required id="fechaDevolucion">
+                    </div>
                     <input type="submit" class="enviar" value="Registrar">
                 </div>
             </form>
