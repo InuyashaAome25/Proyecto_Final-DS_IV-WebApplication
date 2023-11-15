@@ -1,30 +1,131 @@
+
+#formulario{
+    width: 900px;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+    padding: 20px 0;
+}
+
+#tituloDev{
+    padding: 20px;
+    background-color: #463e08;
+    color: white;
+    font-family: Georgia, serif;
+    text-align: center;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
 .casilla{
-    margin-bottom: 10px;
+    display: block;
+    width: 800px;
+    height: auto;
+    padding: 15px;
+    margin: 10px;
+    border-bottom: 1px solid #51510a;
+}
+.casilla2{
+    display: block;
+    width: 800px;
+    height: auto;
+    padding: 15px;
+    margin: 10px;
+    border-bottom: 1px solid #51510a;
+}
+
+.devLabel{
+    display: block;
+    padding: 15px;
+    margin: 15px;
+    font-family: "Times New Roman",serif;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.casilla input{
+    display: block;
+    position: relative;
+    width: 75%;
+    background: #CBD5E1;
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px 50px 25px 90px;
+    border: 2px solid #58483e;
+    font-family: "Times New Roman",serif;
+    font-size: 16px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+h3{
+    color: white;
+    font-family: "Times New Roman",serif;
+    font-size: 28px;
+    margin: 20px;
+    padding: 15px;
+    text-decoration: underline;
+}
+
+.estilo_formulario .casilla2>input[type="radio"]{
+    display: none;
+}
+
+.casilla2>label{
+    color: #0FEDAB;
+    margin: 10px 0;
+    padding: 5px 20px 10px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.casilla2>label:hover{
+    background: rgba(22, 93, 49, 0.8);
+}
+.casilla2>label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid #0FEDAB;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 4px;
+}
+.casilla2>input[type="radio"]:checked + label{
+    padding: 5px 15px;
+    background: #0FEDAB;
+    border-radius: 2px;
+    color: white;
+}
+.casilla2>input[type="radio"]:checked + label:before{
+    display: none;
 }
 
 #enviar-button{
-    bottom: 100%;
-    right: 100%;
-}
-
-#formulario{
-    display: flex;
-    flex-direction: column;
-}
-
-.boton{
-    bottom: 100%;
-    right: 100%;
-}
-
-form{
     width: 100%;
+    height: 50px;
+    margin: auto;
 }
-
-fieldset{
-    border: 2px solid gold;
-}
-
-main{
-    height: 500px;
+.boton{
+    width: 60%;
+    padding: 8px 0;
+    margin: 20px 0;
+    position: relative;
+    left: 165px;
+    background: #15D155;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
 }

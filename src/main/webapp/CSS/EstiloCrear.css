@@ -1,7 +1,7 @@
 
 .estilo_formulario{
     width: 800px;
-    background-color: #3E4B58;
+    background-color: #510A0A;
     border: none;
     padding: 35px;
     margin: auto;
@@ -87,7 +87,7 @@
 .estilo_formulario input[type="radio"]{
     display: none;
 }
-.estilo_formulario #radio label{
+.estilo_formulario #radio>label{
     color: #F29D64;
     padding: 5px 20px 10px 51px;
     display: inline-block;
@@ -98,10 +98,10 @@
     transition: all 0.3s ease;
 }
 
-.estilo_formulario #radio label:hover{
+.estilo_formulario #radio>label:hover{
     background: rgba(242,157,100,0.5);
 }
-.estilo_formulario #radio label:before{
+.estilo_formulario #radio>label:before{
     content: "";
     width: 17px;
     height: 17px;
@@ -114,12 +114,12 @@
     top: 4px;
 }
 
-.estilo_formulario #radio input[type="radio"]:checked + label{
+.estilo_formulario #radio>input[type="radio"]:checked + label{
     padding: 5px 15px;
     background: #F29D64;
     border-radius: 2px;
     color: white;
 }
-.estilo_formulario #radio input[type="radio"]:checked + label:before{
+.estilo_formulario #radio>input[type="radio"]:checked + label:before{
     display: none;
 }
