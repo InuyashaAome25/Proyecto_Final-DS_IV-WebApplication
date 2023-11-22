@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paginas Doradas S.A - Proyecto</title>
+    <title>Paginas Doradas S.A - Proyecto - INFORMEN</title>
     <link rel="stylesheet" href="../CSS/PlantillaBibliotecario.css">
     <link rel="stylesheet" href="../CSS/InformenesEstilo.css">
 </head>
@@ -30,61 +30,57 @@
     </nav>
     <main>
         <form method="get">
-            <div id="BotonTex">
-                <input type="text"
-                       name="Titulo"
-                       size="30"
-                       maxlength="30"
-                       autofocus
-                       title="Ingrese un libro a buscar">
+            <div class="conterInfor">
+                <div id="Reporte">
+                    <button>Generar Reporte</button>
+                </div>
+                <div id="info-reporte">
+                    <h3>Reporte</h3>
+                    <h3>Cantidad de prestamos</h3>
+                    <input type="text" name="cantidadP" readonly>
+                </div>
             </div>
-            <div id="Busqueda">
-                <button>Generar Reporte</button>
-            </div>
-            <div>
-                <h3>Número</h3>
-                <h3>Cantidad de prestamos</h3>
-            </div>
-            <div class="tablaLibro">
-                <table border="1" cellpadding="5">
-                    <caption>Libros más populares</caption>
-                    <thead>
+            <div class="contenedor">
+                <div class="tablaLibro">
+                    <table class="estiloTablas">
+                        <caption>Libros más populares</caption>
+                        <thead>
                         <tr>
                             <th>Titulo</th>
                             <th>Autor</th>
                             <th>Genero</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                        </thead>
+                        <tbody>
                         <tr>
                             <th>TEXTO</th>
                             <th>TEXTO</th>
                             <th>TEXTO</th>
                         </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="tablaUsuario">
-                <table border="1" cellpadding="5">
-                    <caption>Usuarios con más prestamos</caption>
-                    <thead>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Cantidad prestamos</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th>TEXTO</th>
-                        <th>TEXTO</th>
-                        <th>TEXTO</th>
-                    </tr>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tablaUsuario">
+                    <table class="estiloTablas">
+                        <caption>Usuarios con más prestamos</caption>
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Prestamos hechos</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </form>
-        <br><br><br><br><br><br><br><br><br>
     </main>
     <footer>
         <p class="piePag">

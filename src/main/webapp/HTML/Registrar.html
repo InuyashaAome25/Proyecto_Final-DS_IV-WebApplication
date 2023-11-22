@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Paginas Doradas S.A - Proyecto</title>
+    <title>Paginas Doradas S.A - Proyecto -  REGISTRAR</title>
     <link rel="stylesheet" href="../CSS/Plantilla.css">
     <link rel="stylesheet" href="../CSS/registrar.css">
 </head>
@@ -34,17 +34,23 @@
                 </div>
                 <div class="credenciales">
                     <h4>documento de identificación</h4>
-                    <input>
+                    <input type="text" name="identificador" maxlength="16" required>
                     <h4>Nombre</h4>
                     <input type="text" name="nombre" maxlength="20" required>
                     <h4>apellido</h4>
                     <input type="text" name="apellido" maxlength="20" required>
+                    <h4>dirección</h4>
+                    <input type="text" name="ubicación" maxlength="100" required
+                           placeholder="Distrito, Corregimiento, Calle, Casa"
+                           title="Ingrese su dirección con el formato dado y use las comas">
+                    <h4>Teléfono</h4>
+                    <input type="tel" name="telefonoU" pattern="[0-9]{8}" required placeholder="Ingrese su número de teléfono">
                     <h4>correo electronico</h4>
                     <input type="email" class="correo" maxlength="30" required>
                     <h4>confirmación de correo electronico</h4>
                     <input type="email" class="password" maxlength="30" required>
                     <h4>nombre de usuario</h4>
-                    <input>
+                    <input type="text" maxlength="30" required>
                     <h4>contraseña</h4>
                     <input type="password" class="password" maxlength="15" required>
                     <h4>confirmar contraseña</h4>
