@@ -1,0 +1,59 @@
+.recuperar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    max-height: 1000px;
+    margin: 60px 50px;
+}
+.recuperar input {
+    text-align: center;
+}
+
+form {
+    padding: 40px;
+    background-color: #AC8E9A;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 7px 13px 37px #000;
+}
+
+legend {
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    padding: 20px 30px;
+    font-size: 30px;
+    border-bottom: 2px solid silver;
+    color: white;
+}
+
+.credenciales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#correo{
+    width: 70%;
+    margin: 10px;
+    padding: 9px;
+    border-radius: 4px;
+    border: 3px double goldenrod;
+    background-color: #631433;
+    color: white;
+}
+#recuperar{
+    width: 40%;
+    margin: 20px;
+    padding: 9px;
+    border-radius: 4px;
+    border: none;
+    background-color: #6EE7B7;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+    font-family: "Times New Roman",serif;
+}

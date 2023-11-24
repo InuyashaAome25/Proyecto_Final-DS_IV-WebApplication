@@ -1,0 +1,128 @@
+.registrar {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+.registrar input {
+    text-align: center;
+}
+.formularioRegistrar{
+    width: 700px;
+    background-color: #AC8E9A;
+    padding: 35px;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;
+    box-shadow: 7px 13px 37px #000;
+}
+legend {
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin: 10px;
+}
+
+.formularioRegistrar h4{
+    padding: 15px;
+    margin: 15px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.formularioRegistrar .credenciales>input{
+    width: 75%;
+    background: #CBD5E1;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 2px solid goldenrod;
+    font-family: "Times New Roman",serif;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#enviarR{
+    width: 75%;
+    height: 50px;
+    margin: auto;
+}
+#enviarR #registrar{
+    width: 50%;
+    margin-top: 25px;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #6EE7B7;
+    font-size: 16px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.documento{
+    padding: 20px 0;
+    border-bottom: 1px solid goldenrod;
+}
+.formularioRegistrar .documento input[type="radio"]{
+    display: none;
+}
+
+.formularioRegistrar .documento label{
+    color: #3C091D;
+    padding: 5px 20px 10px 51px;
+    display: inline-block;
+    position: relative;
+    font-size: 1em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+.formularioRegistrar .documento label:hover{
+    background: rgba(60,9,29,0.6);
+}
+.formularioRegistrar .documento label:before{
+    content: "";
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    background: none;
+    border: 3px solid #631433;
+    border-radius: 50%;
+    position: absolute;
+    left: 17px;
+    top: 4px;
+}
+.formularioRegistrar .documento input[type="radio"]:checked + label{
+    padding: 5px 15px;
+    background: #631433;
+    border-radius: 2px;
+    color: white;
+}
+.formularioRegistrar .documento input[type="radio"]:checked + label:before{
+    display: none;
+}
+
+.credenciales a{
+    font-family: Georgia, serif;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.credenciales a:hover{
+    text-decoration: underline;
+    font-style: oblique;
+    letter-spacing: 2px;
+    color: gold;
+}

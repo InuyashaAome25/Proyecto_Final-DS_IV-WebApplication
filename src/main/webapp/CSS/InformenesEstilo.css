@@ -1,0 +1,100 @@
+
+.conterInfor{
+    width: 90%;
+    height: 320px;
+    margin: 50px 70px;
+    background-image: url("../IMG/library.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+
+#Reporte{
+    width: 300px;
+    height: 45px;
+    background-color: coral;
+    margin: 10px;
+    padding: 15px;
+    position: relative;
+    top: 30px;
+    left: 400px;
+    bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#Reporte button{
+    width: 90%;
+    margin: 5px 15px;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+#info-reporte{
+    width: 400px;
+    height: 150px;
+    background-color: coral;
+    position: relative;
+    top: 40px;
+    left: 380px;
+    bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+}
+#info-reporte h3{
+    margin: 8px;
+    padding: 10px;
+    font-family: Georgia, serif;
+    text-transform: capitalize;
+    text-align: center;
+}
+#info-reporte input{
+    width: 50%;
+    margin: 8px 90px;
+    padding: 5px;
+    font-family: Georgia, serif;
+}
+.contenedor{
+    display: flex;
+}
+
+.tablaLibro{
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    background-color: #B4424B;
+    border-radius: 8px;
+}
+.estiloTablas caption{
+    margin: 15px 0;
+    padding: 10px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.estiloTablas{
+    width: 100%;
+    border-collapse: collapse;
+}
+.estiloTablas th, td{
+    border: 2px solid white;
+    padding: 10px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.tablaUsuario{
+    width: 40%;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    border-radius: 8px;
+    background-color: #B4424B;
+}

@@ -1,0 +1,150 @@
+html{
+    background-color: aliceblue;
+}
+body{
+    width: 100%;
+    margin: auto;
+    background-color: #CBD5E1;
+}
+header{
+    width: 100%;
+    height: 150px;
+    background-color: #F29D64;
+}
+nav{
+    width: 100%;
+    height: 60px;
+    background-color: #082846;
+}
+main{
+    width: 100%;
+    height: auto;
+    background-color: #CBD5E1;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: #F29D64;
+}
+
+.logo{
+    width: 110px;
+    height: 100px;
+    margin: 10px;
+    padding: 20px;
+    float: left;
+    position: relative;
+    left: 70px;
+    bottom: 5px;
+}
+
+.tituloPrincipal{
+    width: 340px;
+    height: 40px;
+    float: right;
+    position: relative;
+    top: 25px;
+    right: 480px;
+    bottom: 25px;
+    text-align: center;
+    text-transform: capitalize;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 35px;
+    padding: 10px;
+    color: white;
+}
+.piePag{
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    top: 30px;
+}
+/* EStilo del MENU*/
+.menu {
+    list-style: none;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: auto;
+}
+.menu>li{
+    position: relative;
+    display: inline-block;
+}
+.menu>li>a{
+    display: block;
+    padding: 20px 40px 21px 40px;
+    color: white;
+    font-family: "Courier New", monospace;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 300ms ease;
+}
+.menu>li>a:hover{
+    transform: scale(1.2);
+    background: #124574;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    font-style: italic;
+}
+/*Se escribió esta linea para anular el diseño del primer li de la primera lista*/
+.menu>li>ul.submenu >li:first-child> a{
+    background-image: none;
+}
+/*Sub-Menu */
+.submenu{
+    list-style: none;
+    position: absolute;
+    top: 90px;
+    left: -5px;
+    padding: 10px 0px;
+    background: #164E63;
+    width: 120%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    z-index: 10;
+}
+.submenu li a{
+    display: block;
+    padding: 10px;
+    color: white;
+    font-family: "Courier New", monospace;
+    text-decoration: none;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: capitalize;
+    transition: all 300ms ease;
+}
+.menu li:hover .submenu{
+    visibility: visible;
+    opacity: 1;
+    top: 60px;
+}
+.menu li .submenu:before{
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #164E63;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+.submenu> li> a:hover{
+    background-color: #265960;
+    color: #F59E0B;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+}
+.divAside> a:hover{
+    color: darkgoldenrod;
+    font-style: italic;
+    margin-left: 14px;
+}

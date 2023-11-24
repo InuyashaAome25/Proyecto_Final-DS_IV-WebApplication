@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginas Doradas S.A - Proyecto - INFORMEN</title>
+    <link rel="stylesheet" href="../CSS/PlantillaBibliotecario.css">
+    <link rel="stylesheet" href="../CSS/InformenesEstilo.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../IMG/Logo.png" alt="logo compañia" class="logo">
+            <h1 class="tituloPrincipal">paginas doradas</h1>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
+            <li> <a href="Crear_Libro.html">registro</a>
+                <ul class="submenu">
+                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                </ul>
+            </li>
+            <li> <a href="Informenes.html">informenes</a></li>
+            <li> <a href="Avisar.html">avisar</a></li>
+            <li> <a href="Login.html">Inicio de sesión</a> </li>
+        </ul>
+    </nav>
+    <main>
+        <form method="get">
+            <div class="conterInfor">
+                <div id="Reporte">
+                    <button>Generar Reporte</button>
+                </div>
+                <div id="info-reporte">
+                    <h3>Reporte</h3>
+                    <h3>Cantidad de prestamos</h3>
+                    <input type="text" name="cantidadP" readonly>
+                </div>
+            </div>
+            <div class="contenedor">
+                <div class="tablaLibro">
+                    <table class="estiloTablas">
+                        <caption>Libros más populares</caption>
+                        <thead>
+                        <tr>
+                            <th>Titulo</th>
+                            <th>Autor</th>
+                            <th>Genero</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="tablaUsuario">
+                    <table class="estiloTablas">
+                        <caption>Usuarios con más prestamos</caption>
+                        <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Prestamos hechos</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                            <th>TEXTO</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p class="piePag">
+            Uzziel Aparicio -
+            Cesar Castillo -
+            Michael Perez -
+            Victor Rodriguez -
+            Richard Zhang
+        </p>
+        <p class="piePag">
+            © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv - grupo 1
+        </p>
+    </footer>
+</body>
+</html>

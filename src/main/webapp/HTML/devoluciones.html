@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paginas Doradas S.A - Proyecto - DEVOLUCIONES</title>
+    <link rel="stylesheet" href="../CSS/PlantillaBibliotecario.css">
+    <link rel="stylesheet" href="../CSS/estiloDevolucion.css">
+    <link rel="stylesheet" href="../CSS/EstiloCrear.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="../IMG/Logo.png" class="logo">
+            <div>
+                <h1 CLASS="tituloPrincipal">Paginas Doradas</h1>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul class="menu">
+            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
+            <li> <a href="Crear_Libro.html">registro</a>
+                <ul class="submenu">
+                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
+                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                </ul>
+            </li>
+            <li> <a href="Informenes.html">informenes</a></li>
+            <li> <a href="Avisar.html">avisar</a></li>
+            <li> <a href="Login.html">Inicio de sesión</a> </li>
+        </ul>
+    </nav>
+    <main>
+        <div id="formulario">
+            <form action="" method="post" accept-charset="UTF-8">
+                <fieldset class="estilo_formulario">
+                    <legend id="tituloDev">Devoluciones</legend>
+                    <div class="casilla">
+                        <label class="devLabel">ID de préstamo:</label>
+                        <input type="number"
+                               name="id"
+                               size="20"
+                               maxlength="20"
+                               required
+                               placeholder="Identifiador del prestamo"
+                               title="Ingrese el ID del prestamo">
+                        <label class="devLabel">Titulo:</label>
+                        <input type="text"
+                               name="Title"
+                               size="20"
+                               maxlength="20"
+                               title="Ingrese Titulo del libro">
+                        <label class="devLabel">Nombres Prestatario:</label>
+                        <input type="text"
+                               name="Nombre"
+                               size="20"
+                               maxlength="20"
+                               title="Ingrese Nombre del Prestatario">
+                        <label class="devLabel">Fecha Préstamo:</label>
+                        <input type="date"
+                               name="fechaPrestamo"
+                               required
+                               title="Fecha de inicio del prestamos">
+                        <label class="devLabel">Fecha Devolución:</label>
+                        <input type="date"
+                               name="fechaDevolucion"
+                               required
+                               title="Fecha de regreso del libro">
+                    </div>
+                    <h3>Estado</h3>
+                    <div class="casilla2">
+                        <input type="radio" name="revision" value="bueno" checked id="buenEst">
+                        <label for="buenEst">En Buen Estado</label>
+                        <input type="radio" name="revision" value="dañado" id="reparar">
+                        <label for="reparar">Dañado</label>
+                        <input type="radio" name="revision" value="perdido" id="perdido">
+                        <label for="perdido">Perdido</label>
+                    </div>
+                    <div id="enviar-button">
+                        <input type="submit" value="Enviar" class="boton">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p class="piePag">
+                Uzziel Aparicio -
+                Cesar Castillo -
+                Michael Perez -
+                Victor Rodriguez -
+                Richard Zhang
+            </p>
+            <p class="piePag">
+                © Copyright 2023 UTP - 1LS122 - Desarrollo de software iv  - grupo 1
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
