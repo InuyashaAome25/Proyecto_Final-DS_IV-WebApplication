@@ -55,6 +55,11 @@
                     <input type="text" name="autor_nombre" required placeholder="Ingrese el nombre" maxlength="15" class="estilo_input">
                     <label class="estilo_label_autor">Apellido</label>
                     <input type="text" name="autor_apellido" required placeholder="Ingrese el apellido" maxlength="15" class="estilo_input">
+                    <label class="estilo_label">Descripción Autor</label>
+                    <textarea name="descripAutor"
+                              placeholder="De una descripción del autor"
+                              class="estilo-descripción"
+                              required></textarea>
                 </div>
 
                 <label class="estilo_label">ISBN</label> <input type="text"
@@ -70,13 +75,19 @@
                        placeholder="Ingrese la fecha en formato (DD/MM/AA)"
                        size="35" class="estilo_input">
 
-                <label class="estilo_label">Descripción</label>
+                <label class="estilo_label">Descripción del libro</label>
+                <textarea name="descripLibro"
+                          placeholder="De una descripción del libro"
+                          required
+                          class="estilo-descripción"></textarea>
+
+                <label class="estilo_label">genero/s del libro</label>
                 <input type="text"
-                       name="descripLibro"
+                       name="generolibro"
                        required
-                       placeholder="De una descripción del libro"
-                       size="35"
-                       maxlength="50" class="estilo_input">
+                       placeholder="Ingrese el genero o generos del libro y sepárelos por comas"
+                       size="35" class="estilo_input">
+
                 <div id="radio">
                     <h2 id="tituloEstado">Estado</h2>
                     <input type="radio" name="libro" value="disponible" checked id="radio_disponible">

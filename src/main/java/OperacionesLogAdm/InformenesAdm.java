@@ -1,4 +1,4 @@
-package OperacionesLogUser;
+package OperacionesLogAdm;
 
 import BASE_DE_DATOS.Conexion;
 import BASE_DE_DATOS.Prestamos;
