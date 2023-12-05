@@ -25,14 +25,14 @@
   </ul>
 </nav>
 <main>
+  <%!
+    String usuario = "sa";
+    String contrasena = "Inuyasha25";
+  %>
   <%
     Conexion obj = new Conexion("user", "password");
     obj.establecer_Conexion();
     Sesion obj1 = new Sesion();
-  %>
-  <%!
-    String usuario;
-    String contrasena;
   %>
   <%
     usuario = request.getParameter("usuario");

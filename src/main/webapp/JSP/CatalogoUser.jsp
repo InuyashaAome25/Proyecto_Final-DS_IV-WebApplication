@@ -29,12 +29,13 @@
     <%
         String errorMessague = null;
         try {
-            String opcionSeleccionada = request.getParameter("avanzado");
+            String catalogo = request.getParameter("catalogo");
+            String genero = request.getParameter("genero");
             String titulo = request.getParameter("titulo");
+            String autor = request.getParameter("autor");
 
             OperacionCatalogo objBusqueda = new OperacionCatalogo();
-            objBusqueda.asignar(opcionSeleccionada,titulo);
-            
+            objBusqueda.asignar(catalogo,genero,titulo,autor);
 
     %>
     <form action="" method="post" id="Caja">
