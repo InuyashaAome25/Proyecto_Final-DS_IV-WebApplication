@@ -48,7 +48,6 @@ CREATE TABLE Telefono_Personal
         REFERENCES Personal(id_personal)
 );
 
-
 CREATE TABLE Genero
 (
     id_genero INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
@@ -186,7 +185,7 @@ CREATE TABLE Libros_Usuarios
 CREATE TABLE Usuario_Prestamos
 (
 	id_usuarioP NVARCHAR(16) NOT NULL,
-    totalPrestamo int NOT NULL,
+  totalPrestamo int NOT NULL,
 	id_prestamoU VARCHAR(15) NOT NULL,
 	Constraint Usuario_Prestamos_id_usuarioP_id_prestamoU_pk
 		PRIMARY KEY (id_usuarioP,id_prestamoU),
