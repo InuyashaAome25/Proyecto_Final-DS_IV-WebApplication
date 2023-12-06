@@ -17,13 +17,13 @@ public class Conexion {
     public Connection establecer_Conexion() throws Exception{
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            cnn = DriverManager.getConnection("jdbc:sqlserver://LAPTOP-469NVCC0:1433;database=PaginasDoradasBD" +
+            cnn = DriverManager.getConnection("jdbc:sqlserver://LAPTOP-469NVCC0:1433;database=PaginasDoradasBD;" +
                     "user=" +user+ ";password=" +password+ ";encrypt=false");
             return cnn;
         }catch (ClassNotFoundException e){
-            throw  new Exception("Error de carga del driver puente");
+            throw  new Exception("Error de carga del driver puente" + e.getMessage());
         }catch (SQLException e){
-            throw new Exception("Error no se pudo realizar a conexion ala base de datos");
+            throw new Exception("Error no se pudo realizar a conexion ala base de datos" + e.getMessage());
         }
     }
 }

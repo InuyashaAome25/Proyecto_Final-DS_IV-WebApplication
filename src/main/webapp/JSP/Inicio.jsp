@@ -1,7 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+<%--
+  Created by IntelliJ IDEA.
+  User: mary arosemena
+  Date: 12/04/2023
+  Time: 3:00 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Paginas Doradas S.A - Proyecto - INICIO</title>
     <link rel="stylesheet" href="../CSS/Plantilla.css">
     <link rel="stylesheet" href="../CSS/EstiloInicio.css">
@@ -15,7 +21,7 @@
     </header>
     <nav>
         <ul class="menu">
-            <li> <a href="Inicio.html" id="aInicio">Inicio</a> </li>
+            <li> <a href="../HTML/Inicio.html" id="aInicio">Inicio</a> </li>
             <li> <a href="CatalogoUser.html" >Catalogo</a> </li>
             <li> <a href="Login.html">Inicio de sesión</a> </li>
             <li> <a href="Contactenos.html">Contáctenos</a> </li>

@@ -13,73 +13,74 @@ CREATE TABLE Personal
 	passwordP NVARCHAR(20) NOT NULL,
 	rol VARCHAR(15) NOT NULL,
 	id_libroPer INT NOT NULL,
-)
+);
 
 CREATE TABLE Direccion_Personal
 (
-	id_direccionP INT NOT NULL
-		Constraint Direccion_Personal_id_direccion_pk PRIMARY KEY (id_direccionP),
-	distritoP NVARCHAR(25) NOT NULL,
-	corregimientoP NVARCHAR(25) NOT NULL,
-	calleP NVARCHAR(25) NOT NULL,
-	casaP NVARCHAR(15) NOT NULL,
-	id_personalDirP VARCHAR(15) NOT NULL
-		Constraint Direccion_Personal_id_direccionP_fk FOREIGN KEY (id_personalDirP)
-			REFERENCES Personal(id_personal)
-)
+    id_direccionP INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    distritoP NVARCHAR(25) NOT NULL,
+    corregimientoP NVARCHAR(25) NOT NULL,
+    calleP NVARCHAR(25) NOT NULL,
+    casaP NVARCHAR(15) NOT NULL,
+    id_personalDirP VARCHAR(15) NOT NULL,
+    CONSTRAINT Direccion_Personal_id_direccion_pk PRIMARY KEY (id_direccionP),
+    CONSTRAINT Direccion_Personal_id_direccionP_fk FOREIGN KEY (id_personalDirP)
+        REFERENCES Personal(id_personal)
+);
 
 CREATE TABLE Correo_Personal
 (
-	id_correoP INT NOT NULL
-		Constraint Correo_Personal_id_correo_pk PRIMARY KEY (id_correoP),
-	correoPer NVARCHAR(30) NOT NULL,
-	id_personalCP VARCHAR(15) NOT NULL
-		Constraint Correo_Personal_id_correoP_fk FOREIGN KEY (id_personalCP)
-			REFERENCES Personal(id_personal)
-)
+    id_correoP INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    correoPer NVARCHAR(30) NOT NULL,
+    id_personalCP VARCHAR(15) NOT NULL,
+    CONSTRAINT Correo_Personal_id_correo_pk PRIMARY KEY (id_correoP),
+    CONSTRAINT Correo_Personal_id_correoP_fk FOREIGN KEY (id_personalCP)
+        REFERENCES Personal(id_personal)
+);
 
 CREATE TABLE Telefono_Personal
 (
-	id_telefonoP INT NOT NULL
-		Constraint Telefono_Personal_id_telefono_pk PRIMARY KEY (id_telefonoP),
-	numTelefonoP NVARCHAR(13) NOT NULL,
-	id_personalT VARCHAR(15) NOT NULL
-		Constraint Telefono_Personal_id_personalT_fk FOREIGN KEY (id_personalT)
-			REFERENCES Personal(id_personal)
-)
-
+    id_telefonoP INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    numTelefonoP NVARCHAR(13) NOT NULL,
+    id_personalT VARCHAR(15) NOT NULL,
+    CONSTRAINT Telefono_Personal_id_telefono_pk PRIMARY KEY (id_telefonoP),
+    CONSTRAINT Telefono_Personal_id_personalT_fk FOREIGN KEY (id_personalT)
+        REFERENCES Personal(id_personal)
+);
 
 CREATE TABLE Genero
 (
-	id_genero INT NOT NULL
-		Constraint Genero_id_genero_pk PRIMARY KEY,
-	genero VARCHAR(20) NOT NULL
-)
+    id_genero INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    genero VARCHAR(20) NOT NULL,
+    CONSTRAINT Genero_id_genero_pk PRIMARY KEY (id_genero)
+);
 CREATE TABLE Libros
 (
-	id_libro INT NOT NULL
-		Constraint Libros_id_libro_pk PRIMARY KEY,
-	titulo VARCHAR(40) NOT NULL,
-	ISBN INT,
-	editorial VARCHAR(35) NOT NULL,
-	dia INT NOT NULL,
-	mes INT NOT NULL,
-	año INT NOT NULL,
-	descripcion VARCHAR(50)NOT NULL,
-	id_generoL INT NOT NULL
-		Constraint Libros_id_genero_fk FOREIGN KEY (id_generoL)
-			REFERENCES Genero (id_genero)
-)
+    id_libro INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    titulo VARCHAR(40) NOT NULL,
+    ISBN INT,
+    editorial VARCHAR(35) NOT NULL,
+    dia INT NOT NULL,
+    mes INT NOT NULL,
+    año INT NOT NULL,
+    descripcion VARCHAR(50) NOT NULL,
+    id_generoL INT NOT NULL,
+    CONSTRAINT Libros_id_libro_pk PRIMARY KEY (id_libro),
+    CONSTRAINT Libros_id_genero_fk FOREIGN KEY (id_generoL)
+        REFERENCES Genero (id_genero)
+);
+
 CREATE TABLE Imagenes
 (
-	id_imagen INT NOT NULL
-		Constraint Imagenes_id_imagen_pk PRIMARY KEY,
-	nombreImg VARCHAR(20) NOT NULL,
-	imagen varbinary(MAX) NOT NULL,
-	id_libroImg INT NOT NULL 
-		Constraint Imagenes_id_libroImg_fk FOREIGN KEY (id_libroImg)
-		REFERENCES Libros (id_libro)
-)
+    id_imagen INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    nombreImg VARCHAR(20) NOT NULL,
+    imagen varbinary(MAX) NOT NULL,
+    id_libroImg INT NOT NULL,
+    CONSTRAINT Imagenes_id_imagen_pk PRIMARY KEY (id_imagen),
+    CONSTRAINT Imagenes_id_libroImg_fk FOREIGN KEY (id_libroImg)
+        REFERENCES Libros (id_libro)
+);
+
 CREATE TABLE Autor
 (
 	id_autor VARCHAR(10) NOT NULL,
@@ -100,15 +101,16 @@ CREATE TABLE Libro_Autor
 			FOREIGN KEY (id_actorLib)REFERENCES Autor (id_autor)
 )
 
-CREATE TABLE Direccion
+CREATE TABLE DireccionU
 (
-	id_direccion INT NOT NULL
-		Constraint Direccion_id_direccion_pk PRIMARY KEY (id_direccion),
-	distrito VARCHAR(25) NOT NULL,
-	corregimiento VARCHAR(25) NOT NULL,
-	calle VARCHAR(25) NOT NULL,
-	casa NVARCHAR(15) NOT NULL
-)
+    id_direccion INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    distrito VARCHAR(25) NOT NULL,
+    corregimiento VARCHAR(25) NOT NULL,
+    calle VARCHAR(25) NOT NULL,
+    casa NVARCHAR(15) NOT NULL,
+    CONSTRAINT Direccion_id_direccion_pk PRIMARY KEY (id_direccion)
+);
+
 CREATE TABLE Usuarios
 (
 	id_usuario NVARCHAR(16) NOT NULL,
@@ -119,26 +121,26 @@ CREATE TABLE Usuarios
 	id_direccionU INT NOT NULL
 		Constraint Usuarios_id_usuario_pk PRIMARY KEY (id_usuario),
 		Constraint Usuarios_id_dirreccionU_fk FOREIGN KEY (id_direccionU)
-			REFERENCES Direccion (id_direccion)
+			REFERENCES DireccionU (id_direccion)
 )
 CREATE TABLE Telefono
 (
-	id_telefono INT NOT NULL
-		Constraint Telefono_id_telefono_pk PRIMARY KEY (id_telefono),
-	numTelefonoP INT NOT NULL,
-	id_UsuarioT NVARCHAR(16) NOT NULL
-		Constraint Telefono_Personal_id_usuarioT_fk FOREIGN KEY (id_usuarioT)
-			REFERENCES Usuarios(id_usuario)
-)
+    id_telefono INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    numTelefonoP INT NOT NULL,
+    id_UsuarioT NVARCHAR(16) NOT NULL,
+    CONSTRAINT Telefono_id_telefono_pk PRIMARY KEY (id_telefono),
+    CONSTRAINT Telefono_Personal_id_usuarioT_fk FOREIGN KEY (id_usuarioT)
+        REFERENCES Usuarios(id_usuario)
+);
 CREATE TABLE Correo
 (
-	id_correo INT	NOT NULL
-		Constraint Correo_id_correo_pk PRIMARY KEY (id_correo),
-	correoUser NVARCHAR(30) NOT NULL,
-	id_usuarioC NVARCHAR(16) NOT NULL
-		Constraint Correo_id_usuarioC_fk FOREIGN KEY (id_usuarioC)
-			REFERENCES Usuarios(id_usuario)
-)
+    id_correo INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
+    correoUser NVARCHAR(30) NOT NULL,
+    id_usuarioC NVARCHAR(16) NOT NULL,
+    CONSTRAINT Correo_id_correo_pk PRIMARY KEY (id_correo),
+    CONSTRAINT Correo_id_usuarioC_fk FOREIGN KEY (id_usuarioC)
+        REFERENCES Usuarios(id_usuario)
+);
 
 
 CREATE TABLE Prestamos
@@ -183,6 +185,7 @@ CREATE TABLE Libros_Usuarios
 CREATE TABLE Usuario_Prestamos
 (
 	id_usuarioP NVARCHAR(16) NOT NULL,
+  totalPrestamo int NOT NULL,
 	id_prestamoU VARCHAR(15) NOT NULL,
 	Constraint Usuario_Prestamos_id_usuarioP_id_prestamoU_pk
 		PRIMARY KEY (id_usuarioP,id_prestamoU),

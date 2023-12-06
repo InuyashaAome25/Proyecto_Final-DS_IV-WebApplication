@@ -19,12 +19,7 @@ aside{
     bottom: 50px;
     left: 150px;
 }
-.tamañoIMG{
-    width: 210px;
-    height: 280px;
-    box-shadow: 5px 5px 5px 5px rgba(0,0,0, 0.5);
-    margin: 20px 20px 20px 40px;
-}
+
 #parrafoCita{
     width: 85%;
     font-family: "Times New Roman", serif;
@@ -101,7 +96,7 @@ aside{
     text-decoration: underline;
 }
 
-#tituloAside{
+#tituloAsideBlio{
     width: 350px;
     height: auto;
     text-align: center;
@@ -112,6 +107,7 @@ aside{
     font-weight: bold;
     font-style: italic;
     margin: 20px 30px;
+    color: darkorange;
 }
 
 .linkAside{

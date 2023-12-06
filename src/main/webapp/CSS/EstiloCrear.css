@@ -30,6 +30,7 @@
     font-size: 20px;
     color: white;
     text-align: center;
+    text-transform: capitalize;
 }
 
 .estilo_label_autor{
@@ -122,4 +123,18 @@
 }
 .estilo_formulario #radio>input[type="radio"]:checked + label:before{
     display: none;
+}
+
+.estilo-descripción{
+    width: 94%;
+    height: 150px;
+    border: 2px solid #58483e;
+    border-radius: 5px;
+    background: #CBD5E1;
+    padding: 10px;
+    margin: 5px;
+    resize: none;
+    font-family: "Times New Roman",serif;
+    font-size: 16px;
+    text-transform: capitalize;
 }
