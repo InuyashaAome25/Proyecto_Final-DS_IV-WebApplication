@@ -21,10 +21,10 @@
     </header>
     <nav>
         <ul class="menu">
-            <li> <a href="../HTML/Inicio.html" id="aInicio">Inicio</a> </li>
-            <li> <a href="CatalogoUser.html" >Catalogo</a> </li>
-            <li> <a href="Login.html">Inicio de sesión</a> </li>
-            <li> <a href="Contactenos.html">Contáctenos</a> </li>
+            <li> <a href="../JSP/Inicio.jsp" id="aInicio">Inicio</a> </li>
+            <li> <a href="../JSP/CatalogoUser.jsp" >Catalogo</a> </li>
+            <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
+            <li> <a href="../JSP/Contactenos.jsp">Contáctenos</a> </li>
         </ul>
     </nav>
     <main>

@@ -58,12 +58,12 @@ CREATE TABLE Libros
 (
     id_libro INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
     titulo VARCHAR(40) NOT NULL,
-    ISBN INT,
+    ISBN BIGINT,
     editorial VARCHAR(35) NOT NULL,
     dia INT NOT NULL,
     mes INT NOT NULL,
     año INT NOT NULL,
-    descripcion VARCHAR(50) NOT NULL,
+    descripcion VARCHAR(MAX) NOT NULL,
     id_generoL INT NOT NULL,
     CONSTRAINT Libros_id_libro_pk PRIMARY KEY (id_libro),
     CONSTRAINT Libros_id_genero_fk FOREIGN KEY (id_generoL)
@@ -74,7 +74,7 @@ CREATE TABLE Imagenes
 (
     id_imagen INT IDENTITY(1,1) NOT NULL, -- Agregado IDENTITY
     nombreImg VARCHAR(20) NOT NULL,
-    imagen varbinary(MAX) NOT NULL,
+    imagen VARCHAR(MAX) NOT NULL,
     id_libroImg INT NOT NULL,
     CONSTRAINT Imagenes_id_imagen_pk PRIMARY KEY (id_imagen),
     CONSTRAINT Imagenes_id_libroImg_fk FOREIGN KEY (id_libroImg)
@@ -92,7 +92,7 @@ CREATE TABLE Libro_Autor
 (
 	id_libAct INT NOT NULL,
 	id_actorLib VARCHAR(10) NOT NULL,
-	descripcionAct VARCHAR(50),
+	descripcionAct VARCHAR(MAX),
 		Constraint Libro_Autor_id_libAct_id_actorLib_pk
 			PRIMARY KEY (id_libAct,id_actorLib),
 		Constraint Libro_Autor_id_libAct_fk
@@ -108,7 +108,9 @@ CREATE TABLE DireccionU
     corregimiento VARCHAR(25) NOT NULL,
     calle VARCHAR(25) NOT NULL,
     casa NVARCHAR(15) NOT NULL,
-    CONSTRAINT Direccion_id_direccion_pk PRIMARY KEY (id_direccion)
+    CONSTRAINT Direccion_id_direccion_pk PRIMARY KEY (id_direccion),
+    CONSTRAINT DireccionU_id_usuario_fk FOREIGN KEY (id_usuario)
+        REFERENCES Usuarios (id_usuario)
 );
 
 CREATE TABLE Usuarios
@@ -120,8 +122,6 @@ CREATE TABLE Usuarios
 	contraseña NVARCHAR(25) NOT NULL,
 	id_direccionU INT NOT NULL
 		Constraint Usuarios_id_usuario_pk PRIMARY KEY (id_usuario),
-		Constraint Usuarios_id_dirreccionU_fk FOREIGN KEY (id_direccionU)
-			REFERENCES DireccionU (id_direccion)
 )
 CREATE TABLE Telefono
 (

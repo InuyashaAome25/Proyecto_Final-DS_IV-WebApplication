@@ -24,20 +24,35 @@
 
 <nav>
     <ul class="menu">
-        <li> <a href="../HTML/Bibliotecario.html" id="aInicio">Inicio</a> </li>
-        <li> <a href="../HTML/CatalogoBibliotecario.html" >Catalogo</a> </li>
-        <li> <a href="../HTML/Crear_Libro.html">registro</a>
+        <li> <a href="../JSP/Bibliotecario.jsp" id="aInicio">Inicio</a> </li>
+        <li> <a href="../JSP/CatalogoBibliotecario.jsp" >Catalogo</a> </li>
+        <li> <a href="../JSP/Crear_Libro.jsp">registro</a>
             <ul class="submenu">
-                <li><a href="../HTML/prestamosBibliotecario.html">Prestamos</a></li>
-                <li><a href="../HTML/devoluciones.html">Devoluciones</a></li>
+                <li><a href="../JSP/prestamosBibliotecario.jsp">Prestamos</a></li>
+                <li><a href="../JSP/Devoluciones.jsp">Devoluciones</a></li>
             </ul>
         </li>
-        <li> <a href="../HTML/Informenes.html">informenes</a></li>
-        <li> <a href="../HTML/Avisar.html">avisar</a></li>
-        <li> <a href="../HTML/Login.html">Inicio de sesión</a> </li>
+        <li> <a href="../JSP/">informenes</a></li>
+        <li> <a href="../JSP/Avisar.jsp">avisar</a></li>
+        <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
     </ul>
 </nav>
 <main>
+    <%
+        Conexion obj = new Conexion("sa","Inuyasha25");
+        obj.establecer_Conexion();
+    %>
+    <%
+        String devolucionExitosMessage = (String) request.getSession().getAttribute("devolucionExitosa");
+        request.getSession().removeAttribute("devolucionExitosa");
+    %>
+    <% if (devolucionExitosMessage != null){ %>
+    <div class="exito">
+        <%=devolucionExitosMessage%>
+    </div>
+    <%
+        }
+    %>
     <%
         String errorMessage = null;
         try {
@@ -50,9 +65,11 @@
 
             Devoluciones objDevolucion = new Devoluciones();
             objDevolucion.asignar(id,title,nombre,fechaDevolucion,fechaPrestamo,revision);
-            Conexion obj1 = new Conexion("user","password");
-            obj1.establecer_Conexion();
-            objDevolucion.devoluciones(obj1,id);
+
+            int resultadoDevolucion = objDevolucion.devoluciones(obj,id);
+            if(resultadoDevolucion > 0){
+                request.getSession().setAttribute("devolucionExitosa","Devolución realizada con éxito");
+            }
     %>
     <div id="formulario">
         <form action="" method="post" accept-charset="UTF-8">
@@ -108,7 +125,7 @@
 
     <div class="salida">
         <fieldset>
-            <h2>Devolución Realizada del libro <%=title%></h2>
+            <h2> <%=devolucionExitosMessage%></h2>
         </fieldset>
     </div>
     <%

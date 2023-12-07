@@ -5,49 +5,132 @@ import java.time.LocalDateTime;
 import java.util.PrimitiveIterator;
 
 public class Prestamos  {
-    private String id_prestamos;
-    private String id_usuariosPre;
-    private int id_libroPre;
-    private LocalDateTime fechaPrestamos;
-    private LocalDate fechaDevolucion;
+    private int idPrestamo;
+    private int idLibro;
+    private String idUsuario;
+    private String fechaPrestamo;
+    private String fechaDevolucion;
 
-    public String getId_prestamos() {
-        return id_prestamos;
+    private String fechaDevoReal;
+    private String estadoPrestamo;
+    private String nombre;
+    private String apellido;
+    private String titulo;
+    private String autor;
+
+    private int cantidadPrestamo;
+
+    private String correo;
+
+    // Setters para asignar valores a los campos de la clase
+    public void setCorreo(String correo){
+
+        this.correo = correo;
     }
 
-    public void setId_prestamos(String id_prestamos) {
-        this.id_prestamos = id_prestamos;
+    public void setIdPrestamo(int idPrestamo){
+
+        this.idPrestamo = idPrestamo;
     }
 
-    public String getId_usuariosPre() {
-        return id_usuariosPre;
+    public void setIdLibro(int idLibro){
+
+        this.idLibro = idLibro;
     }
 
-    public void setId_usuariosPre(String id_usuariosPre) {
-        this.id_usuariosPre = id_usuariosPre;
+    public void setIdUsuario(String idUsuario){
+
+        this.idUsuario = idUsuario;
     }
 
-    public int getId_libroPre() {
-        return id_libroPre;
+    public void setNombre(String nombre){
+
+        this.nombre = nombre;
     }
 
-    public void setId_libroPre(int id_libroPre) {
-        this.id_libroPre = id_libroPre;
+    public void setApellido(String apellido){
+
+        this.apellido = apellido;
     }
 
-    public LocalDateTime getFechaPrestamos() {
-        return fechaPrestamos;
+    public void setTitulo(String titulo){
+
+        this.titulo = titulo;
     }
 
-    public void setFechaPrestamos(LocalDateTime fechaPrestamos) {
-        this.fechaPrestamos = fechaPrestamos;
+    public void setAutor(String autor){
+
+        this.autor = autor;
     }
 
-    public LocalDate getFechaDevolucion() {
+    public void setCantidadPrestamo(int cantidadPrestamo){
+
+        this.cantidadPrestamo = cantidadPrestamo;
+    }
+
+    // Getters para obtener los valores de los campos de la clase
+    public int getIdPrestamo(){
+
+        return idPrestamo;
+    }
+
+    public int getIdLibro(){
+
+        return idLibro;
+    }
+
+    public String getIdUsuario(){
+
+        return idUsuario;
+    }
+
+    public String getFechaPrestamo(){
+
+        return fechaPrestamo;
+    }
+
+    public String getFechaDevolucion(){
+
         return fechaDevolucion;
     }
 
-    public void setFechaDevolucion(LocalDate fechaDevolucion) {
-        this.fechaDevolucion = fechaDevolucion;
+    public String getEstadoPrestamo(){
+
+        return estadoPrestamo;
+    }
+
+    public String getFechaDevoReal() {
+
+        return fechaDevoReal;
+    }
+
+    public String getNombre(){
+
+        return nombre;
+    }
+
+    public String getApellido(){
+
+        return apellido;
+    }
+
+    public String getTitulo(){
+
+        return titulo;
+    }
+
+    public String getAutor(){
+
+        return autor;
+    }
+
+    public int getCantidadPrestamo(){
+
+        return cantidadPrestamo;
+    }
+
+    public String getCorreo(){
+
+        return correo;
     }
 }

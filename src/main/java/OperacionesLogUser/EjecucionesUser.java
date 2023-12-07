@@ -51,48 +51,36 @@ public class EjecucionesUser {
     }
 
     //Metodos para agregar los datos del usuario
-    public int insertarDireccion(String distrito, String corregimiento, String calle, String casa, Conexion obj) throws Exception {
+    public void insertarDireccion(String distrito, String corregimiento, String calle, String casa,String id_usuarioU, Conexion obj) throws Exception {
         Connection cnn = obj.establecer_Conexion();
-        int idDireccionU = -1;
 
         try {
-            String cadSQL = "INSERT INTO DireccionU (distrito, corregimiento, calle, casa) VALUES (?, ?, ?, ?)";
+            String cadSQL = "INSERT INTO DireccionU (distrito, corregimiento, calle, casa,id_usuarioU) VALUES (?, ?, ?, ?,?)";
             preparedStatement = cnn.prepareStatement(cadSQL);
             preparedStatement.setString(1, distrito);
             preparedStatement.setString(2, corregimiento);
             preparedStatement.setString(3, calle);
             preparedStatement.setString(4, casa);
+            preparedStatement.setString(5,id_usuarioU);
 
-            int filasAfectadas = preparedStatement.executeUpdate();
-            if (filasAfectadas > 0) {
-                // Obtener el ID generado
-                ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
-                if (generatedKeys.next()) {
-                    idDireccionU = generatedKeys.getInt(1);
-                    System.out.println("ID generado para DireccionU: " + idDireccionU);
-                } else {
-                    throw new SQLException("No se pudo obtener el ID generado para DireccionU");
-                }
-            }
+            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new Exception("Error al insertar datos en la tabla DireccionU", e);
         } finally {
             cerrarRecursos();
         }
-        return idDireccionU;
     }
-    public void insertarUsuario(String idUsuario, String nombre, String apellido, String loginUser, String contrasena, int idDireccionU, Conexion obj) throws Exception {
+    public void insertarUsuario(String idUsuario, String nombre, String apellido, String loginUser, String contrasena, Conexion obj) throws Exception {
         Connection cnn = obj.establecer_Conexion();
 
         try {
-            String cadSQL = "INSERT INTO Usuarios (id_usuario, nombre, apellido, loginUser, contraseña, id_direccionU) VALUES (?, ?, ?, ?, ?, ?)";
+            String cadSQL = "INSERT INTO Usuarios (id_usuario, nombre, apellido, loginUser, contraseña) VALUES (?, ?, ?, ?, ?)";
             preparedStatement = cnn.prepareStatement(cadSQL);
             preparedStatement.setString(1, idUsuario);
             preparedStatement.setString(2, nombre);
             preparedStatement.setString(3, apellido);
             preparedStatement.setString(4, loginUser);
             preparedStatement.setString(5, contrasena);
-            preparedStatement.setInt(6, idDireccionU);
 
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

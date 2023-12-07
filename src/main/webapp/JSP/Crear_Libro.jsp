@@ -13,17 +13,17 @@
     </header>
     <nav>
         <ul class="menu">
-            <li> <a href="Bibliotecario.html" id="aInicio">Inicio</a> </li>
-            <li> <a href="CatalogoBibliotecario.html" >Catalogo</a> </li>
-            <li> <a href="Crear_Libro.html">registro</a>
+            <li> <a href="../JSP/Bibliotecario.jsp" id="aInicio">Inicio</a> </li>
+            <li> <a href="../JSP/CatalogoBibliotecario.jsp" >Catalogo</a> </li>
+            <li> <a href="../JSP/Crear_Libro.jsp">registro</a>
                 <ul class="submenu">
-                    <li><a href="prestamosBibliotecario.html">Prestamos</a></li>
-                    <li><a href="devoluciones.html">Devoluciones</a></li>
+                    <li><a href="../JSP/prestamosBibliotecario.jsp">Prestamos</a></li>
+                    <li><a href="../JSP/Devoluciones.jsp">Devoluciones</a></li>
                 </ul>
             </li>
-            <li> <a href="Informenes.html">informenes</a></li>
-            <li> <a href="Avisar.html">avisar</a></li>
-            <li> <a href="Login.html">Inicio de sesión</a> </li>
+            <li> <a href="../JSP/">informenes</a></li>
+            <li> <a href="../JSP/Avisar.jsp">avisar</a></li>
+            <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
         </ul>
     </nav>
     <main>

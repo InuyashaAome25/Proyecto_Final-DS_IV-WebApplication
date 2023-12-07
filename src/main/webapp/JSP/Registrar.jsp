@@ -92,8 +92,8 @@
 
                     if (identificadorValido) {
                         // Continuar con el proceso de registro
-                        int idDireccionU = ejecucionesUser.insertarDireccion(distrito,corregimiento,calle,casa,conexionBD);
-                        ejecucionesUser.insertarUsuario(identificador,nombre,apellido,userName,passwordUser,idDireccionU,conexionBD);
+                        ejecucionesUser.insertarUsuario(identificador,nombre,apellido,userName,passwordUser,conexionBD);
+                        ejecucionesUser.insertarDireccion(distrito,corregimiento,calle,casa,identificador,conexionBD);
                         ejecucionesUser.insertarTelefono(Integer.parseInt(telefono),identificador,conexionBD);
                         ejecucionesUser.insertarCorreo(correo,identificador,conexionBD);
 
@@ -108,6 +108,7 @@
                     e.printStackTrace();
                     // Redirigir a una página de error
                     response.sendRedirect("errorRegistro.jsp");
+                    throw new RuntimeException("Error al registrar.", e);
                 }
             }
         %>

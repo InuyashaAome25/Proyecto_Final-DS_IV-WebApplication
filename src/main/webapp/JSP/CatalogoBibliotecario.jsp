@@ -1,4 +1,7 @@
-<%@ page import="OperacionesLogAdm.BusqueCatalogo" %>
+<%@ page import="OperacionesLogAdm.BusqueCatalogo"%>
+<%@ page import="BASE_DE_DATOS.*" %>
+<%@ page import="java.util.LinkedList" %>
+<%@ page import="java.util.Base64" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,32 +25,41 @@
 
 <nav>
     <ul class="menu">
-        <li> <a href="../HTML/Bibliotecario.html">Inicio</a> </li>
-        <li> <a href="../HTML/CatalogoBibliotecario.html" >Catalogo</a> </li>
-        <li> <a href="../HTML/Crear_Libro.html">registro</a>
+        <li> <a href="../JSP/Bibliotecario.jsp" id="aInicio">Inicio</a> </li>
+        <li> <a href="../JSP/CatalogoBibliotecario.jsp" >Catalogo</a> </li>
+        <li> <a href="../JSP/Crear_Libro.jsp">registro</a>
             <ul class="submenu">
-                <li><a href="../HTML/prestamosBibliotecario.html">Prestamos</a></li>
-                <li><a href="../HTML/devoluciones.html">Devoluciones</a></li>
+                <li><a href="../JSP/prestamosBibliotecario.jsp">Prestamos</a></li>
+                <li><a href="../JSP/Devoluciones.jsp">Devoluciones</a></li>
             </ul>
         </li>
-        <li> <a href="../HTML/Informenes.html">informenes</a></li>
-        <li> <a href="../HTML/Avisar.html">avisar</a></li>
-        <li> <a href="../HTML/Login.html">Inicio de sesión</a> </li>
+        <li> <a href="../JSP/">informenes</a></li>
+        <li> <a href="../JSP/Avisar.jsp">avisar</a></li>
+        <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
     </ul>
 </nav>
 
 <main>
     <%
+        LinkedList<Libros> libros = null;
         String errorMessague = null;
+
         try {
+            Conexion obj = new Conexion("sa", "Inuyasha25");
+            obj.establecer_Conexion();
+
             String catalogo = request.getParameter("catalogo");
             String genero = request.getParameter("genero");
             String titulo = request.getParameter("titulo");
             String autor = request.getParameter("autor");
 
             BusqueCatalogo objBusqueda = new BusqueCatalogo();
-            objBusqueda.asignar(catalogo,genero,titulo,autor);
+            objBusqueda.asignar(catalogo, genero, titulo, autor);
 
+            libros = objBusqueda.consultarCatalogo(obj);
+        }catch (Exception e){
+            errorMessague = "Error durante la busqueda: "+e.getMessage();
+        }
     %>
     <form action="CatalogoBibliotecario.jsp" method="post" id="cajaBlio">
         <div class="cajaBusqueda-blio">
@@ -72,6 +84,40 @@
                 <button>Generar Reporte</button>
             </div>
         </div>
+    </form>
+    <%
+        if (errorMessague != null) {
+    %>
+    <div class="error">
+        <%=errorMessague%>
+    </div>
+    <%
+    }else { %>
+    <div class="cuadricula">
+        <% for (Libros libro : libros){ %>
+        <article class="estilo-libro">
+            <div class="libros">
+                <figure>
+                    <img src="<%= "data:image/jpeg;base64," + Base64.getEncoder().encodeToString() %>" alt="<%= libro.getTitulo() %>">
+                </figure>
+                <div class="dato-libro">
+                    <h2><%= libro.getTitulo() %></h2>
+                    <p class="info-libro">
+                        <span>Autor: <%= libro.getDescripcion() %></span>
+                        <span>Género: <%= libro.getGenero() %></span>
+                        <span>ISBN: <%= libro.getISBN() %></span>
+                    </p>
+                    <button>Ver descripción del libro</button>
+                </div>
+            </div>
+        </article>
+        <%
+            }
+        %>
+    </div>
+    <%
+        }
+    %>
         <div class="cuadricula">
             <article class="estilo-libro">
                 <div class="libros">
@@ -199,18 +245,6 @@
                 </div>
             </article>
         </div>
-    </form>
-    <%
-        }catch (Exception e){
-            errorMessague = ("Error durante la búsqueda: "+e.getMessage());
-        }if (errorMessague != null){
-    %>
-    <div class="error">
-        <%=errorMessague%>;
-    </div>
-    <%
-        }
-    %>
 </main>
 
 <footer>

@@ -5,6 +5,7 @@
       <map>
         <entry key="file://$PROJECT_DIR$/src/main/webapp/HTML/Crear_Libro.html" value="file://$PROJECT_DIR$/src/main/webapp/HTML" />
         <entry key="file://$PROJECT_DIR$/src/main/webapp/HTML/login.html" value="file://$PROJECT_DIR$/src/main/webapp/HTML" />
+        <entry key="file://$PROJECT_DIR$/src/main/webapp/JSP/Libro.jsp" value="file://$PROJECT_DIR$/src/main/webapp/JSP" />
       </map>
     </option>
   </component>

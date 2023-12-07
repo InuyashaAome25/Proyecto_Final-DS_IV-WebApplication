@@ -17,7 +17,7 @@
         <ul class="menu">
             <li> <a href="../JSP/Inicio.jsp" id="aInicio">Inicio</a> </li>
             <li> <a href="../JSP/CatalogoUser.jsp" >Catalogo</a> </li>
-            <li> <a href="../JSP/login.jsp">Inicio de sesión</a> </li>
+            <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
             <li> <a href="../JSP/Contactenos.jsp">Contáctenos</a> </li>
         </ul>
     </nav>
@@ -65,7 +65,7 @@
             </iframe>
         </div>
         <div id="contenedorForm">
-            <form method="post">
+            <form method="post" >
                 <fieldset class="formContate">
                     <legend>Estamos Aquí para Escucharte</legend>
                     <label for="nombre">nombre:</label>

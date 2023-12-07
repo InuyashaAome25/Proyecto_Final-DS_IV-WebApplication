@@ -1,5 +1,7 @@
-<%@ page import="BASE_DE_DATOS.Conexion" %>
+<%@ page import="BASE_DE_DATOS.*" %>
 <%@ page import="OperacionesLogUser.OperacionCatalogo" %>
+<%@ page import="java.util.LinkedList" %>
+<%@ page import="java.util.Base64" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,22 +23,31 @@
     <ul class="menu">
         <li> <a href="../JSP/Inicio.jsp" id="aInicio">Inicio</a> </li>
         <li> <a href="../JSP/CatalogoUser.jsp" >Catalogo</a> </li>
-        <li> <a href="../JSP/login.jsp">Inicio de sesión</a> </li>
+        <li> <a href="../JSP/Logout.jsp">Cerrar sesión</a> </li>
         <li> <a href="../JSP/Contactenos.jsp">Contáctenos</a> </li>
     </ul>
 </nav>
 <main>
     <%
+        LinkedList<Libros> libros = null;
         String errorMessague = null;
+
         try {
+            Conexion obj = new Conexion("sa", "Inuyasha25");
+            obj.establecer_Conexion();
+
             String catalogo = request.getParameter("catalogo");
             String genero = request.getParameter("genero");
             String titulo = request.getParameter("titulo");
             String autor = request.getParameter("autor");
 
             OperacionCatalogo objBusqueda = new OperacionCatalogo();
-            objBusqueda.asignar(catalogo,genero,titulo,autor);
+            objBusqueda.asignar(catalogo, genero, titulo, autor);
 
+            libros = objBusqueda.consultarCatalogo(obj);
+        }catch (Exception e){
+            errorMessague = "Error durante la busqueda: "+e.getMessage();
+        }
     %>
     <form action="" method="post" id="Caja">
         <div class="cajaBusqueda">
@@ -62,6 +73,39 @@
             </div>
         </div>
     </form>
+    <%
+        if (errorMessague != null) {
+    %>
+    <div class="error">
+        <%=errorMessague%>
+    </div>
+    <%
+        }else { %>
+    <div class="cuadricula">
+        <% for (Libros libro : libros){ %>
+        <article class="estilo-libro">
+            <div class="libros">
+                <figure>
+                    <img src="<%= "data:image/jpeg;base64," + Base64.getEncoder().encodeToString() %>" alt="<%= libro.getTitulo() %>">
+                </figure>
+                <div class="dato-libro">
+                    <h2><%= libro.getTitulo() %></h2>
+                    <p class="info-libro">
+                        <span>Autor: <%= libro.getDescripcion() %></span>
+                        <span>Género: <%= libro.getGenero() %></span>
+                        <span>ISBN: <%= libro.getISBN() %></span>
+                    </p>
+                    <button>Ver descripción del libro</button>
+                </div>
+            </div>
+        </article>
+        <%
+            }
+        %>
+    </div>
+    <%
+        }
+    %>
     <div class="cuadricula">
         <article class="estilo-libro">
             <div class="libros">
@@ -182,17 +226,6 @@
             </div>
         </article>
     </div>
-    <%
-        }catch (Exception e){
-            errorMessague = ("Error durante la búsqueda: "+e.getMessage());
-        }if (errorMessague != null){
-    %>
-    <div class="error">
-        <%=errorMessague%>;
-    </div>
-    <%
-        }
-    %>
 </main>
 
 <footer>
