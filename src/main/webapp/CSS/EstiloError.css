@@ -1,0 +1,17 @@
+
+div {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #dc3545; /* Cambia el color del texto del encabezado a un tono rojo */
+}
+
+p {
+    color: #333; /* Cambia el color del texto de los párrafos */
+    margin-bottom: 10px; /* Añade un margen inferior a los párrafos */
+}

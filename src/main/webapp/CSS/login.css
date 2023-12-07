@@ -56,7 +56,6 @@ legend {
     margin-bottom: 20px;
     border-radius: 3px;
     border: 3px outset goldenrod;
-    text-transform: capitalize;
     color: white;
 }
 .user #password{

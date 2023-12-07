@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ page contentType="text/html; charset=UTF-8"%>
 <head>
     <meta charset="UTF-8">
     <title>Paginas Doradas S.A - Proyecto - INICIO</title>
@@ -26,7 +27,7 @@
              </li>
              <li> <a href="Informenes.html">informenes</a></li>
              <li> <a href="Avisar.html">avisar</a></li>
-             <li> <a href="Login.html">Inicio de sesión</a> </li>
+             <li> <a href="Logout.jsp">Cerrar sesión</a> </li>
          </ul>
      </nav>
       <main>

@@ -6,21 +6,21 @@
 <html>
 <head>
     <title>Paginas Doradas S.A - Proyecto - LOGIN</title>
-    <link rel="stylesheet" href="CSS/Plantilla.css">
-    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="../CSS/Plantilla.css">
+    <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
 <header>
     <div>
-        <img src="IMG/Logo.png" alt="Logo" class="logo">
+        <img src="../IMG/Logo.png" alt="Logo" class="logo">
         <h1 class="tituloPrincipal">Paginas Doradas</h1>
     </div>
 </header>
 <nav>
     <ul class="menu">
-        <li> <a href="index.jsp" id="aInicio">Inicio</a> </li>
-        <li> <a href="index.jsp" >Catalogo</a> </li>
-        <li> <a href="index.jsp">Contáctenos</a> </li>
+        <li> <a href="Login.jsp" id="aInicio">Inicio</a> </li>
+        <li> <a href="Login.jsp" >Catalogo</a> </li>
+        <li> <a href="Login.jsp">Contáctenos</a> </li>
     </ul>
 </nav>
 <main>
@@ -59,17 +59,17 @@
                 session.setAttribute("usuarioguardado", usuario);
     %>
     <%
-        response.sendRedirect("JSP/Inicio.jsp");
+        response.sendRedirect("Inicio.jsp");
     } else if (esPersonal) {
         session.setAttribute("usuarioguardado", usuario);
     %>
     <%
-        response.sendRedirect("JSP/Bibliotecario.jsp");
+        response.sendRedirect("Bibliotecario.jsp");
     } else {
     %>
     <h1>Usuario o Contraseña incorrecta. Inténtelo nuevamente.</h1>
     <%
-                    response.sendRedirect("JSP/Registrar.jsp");
+                    response.sendRedirect("Registrar.jsp");
                 }
             } catch (SQLException e) {
                 throw new RuntimeException("Error de SQL al procesar la autenticación.", e);
